@@ -1,12 +1,13 @@
-$primary: #66eba9;
-$secondary: #ce4fba;
+$primary: #ce4fba ;
+$secondary: #66eba9;
 $black: #000000;
 $white: #fff;
 $white-2: rgba(#fff, 0.6);
 $green: #66eba9;
-$gradient: linear-gradient(to right, #66eba9, #6381fd, #ce4fba, #fa5561);
-$gradient-2: linear-gradient(to right, #ce4fba, #fa5561);
-$gradient-3: linear-gradient(to right, #66eba9, #6381fd);
+$gray:#DCDCDC;
+$gradient: linear-gradient(90deg, #66eba9, #6381fd, #ce4fba, #fa5561);
+$gradient-2: linear-gradient(90deg, #ce4fba, #fa5561);
+$gradient-3: linear-gradient(90deg, #66eba9, #6381fd);
 $gradient-4: linear-gradient(180deg, #66eba9 0%, #fa5561 100%);
 
 $font-primary: "Montserrat", sans-serif;

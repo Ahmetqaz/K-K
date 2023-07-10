@@ -1,6 +1,80 @@
 /// section footer
 .footer {
-  margin-top: auto;
+  padding: 100px 0 20px;
   &__inner {
+    padding: 70px 80px;
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    background: rgba($black, 0.5);
+    overflow: hidden;
+    &-row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    &-column {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 32px;
+    }
+    &-link {
+      color: $gray;
+      @include transition;
+      position: relative;
+      font-size: 18px;
+      font-weight: 400;
+      &:after {
+        content: "";
+        width: 0;
+        height: 1px;
+        background: $white;
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        @include transition;
+        opacity: 0;
+      }
+      &:hover {
+        color: $white;
+        &:after {
+          width: 100%;
+          opacity: 1;
+        }
+      }
+    }
+    &-copy {
+      color: $gray;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
+  .bubles {
+    &__shape {
+      width: 500px;
+      height: 500px;
+      opacity: 0.8;
+      &._pink {
+        right: -150px;
+        top: -150px;
+        background: linear-gradient(243deg, #66eba9, #6381fd, #ce4fba, #fa5561);
+      }
+      &._yellow {
+        top: unset;
+        right: unset;
+        left: -250px;
+        bottom: -250px;
+        background: linear-gradient(203deg, #66eba9 0%, #fa5561 100%);
+      }
+    }
+  }
+  .logo {
+    margin-bottom: 32px;
+  }
+  .autoContainer {
+    padding: 0 20px;
   }
 }

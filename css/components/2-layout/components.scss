@@ -198,7 +198,6 @@
     position: relative;
     border-radius: 88px;
     min-width: 132px;
-    text-transform: uppercase;
     &::before {
       content: "";
       position: absolute;
@@ -207,7 +206,7 @@
       right: 0;
       bottom: 0;
       border-radius: inherit;
-      border: 1.5px solid transparent;
+      border: 2px solid transparent;
       background: $gradient border-box;
       -webkit-mask: linear-gradient(#fff 0 0) padding-box,
         linear-gradient(#fff 0 0);
@@ -240,6 +239,16 @@
       .ico {
         height: 1.42em;
       }
+    }
+    &._extra {
+      font-size: 18px;
+      padding: 1em 1.2em;
+      min-width: 170px;
+    }
+    &._extra-lg {
+      font-size: 18px;
+      padding: 1em 1.2em;
+      min-width: 200px;
     }
     &:hover {
       &:after {
@@ -597,6 +606,9 @@
     background: $gradient-3;
     -webkit-background-clip: text;
   }
+  &--secondary {
+    color: $secondary;
+  }
 }
 .logo {
   font-size: 32px;
@@ -647,6 +659,7 @@
     height: calc(100% + 20px);
     top: -10px;
     left: -10px;
+    z-index: 1;
     img {
       width: 100%;
       height: 100%;

@@ -7,7 +7,6 @@
   z-index: 1;
   transition: 0.2s ease-out;
   transition-property: opacity, transform, padding;
-
   &__inner {
     position: relative;
     display: flex;
@@ -19,12 +18,16 @@
       display: none;
     }
   }
-
   &.sticky {
     position: fixed;
     padding: 20px 0;
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
+  }
+  .button {
+    &--primary {
+      text-transform: uppercase;
+    }
   }
 }
 .nav {
