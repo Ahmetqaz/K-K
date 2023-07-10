@@ -632,6 +632,12 @@ svg {
   background: -webkit-gradient(linear, left top, right top, from(#66eba9), color-stop(#6381fd), color-stop(#ce4fba), to(#fa5561));
   background: linear-gradient(90deg, #66eba9, #6381fd, #ce4fba, #fa5561);
   border-radius: 88px;
+  border: unset;
+}
+.button--secondary:hover {
+  opacity: 0.8;
+  background-size: 150% 100%;
+  background-position: 20%;
 }
 .button--text {
   padding: 0.8em 0.6em;
