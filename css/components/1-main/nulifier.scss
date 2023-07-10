@@ -28,7 +28,8 @@ input::-webkit-inner-spin-button {
 }
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+  display: none;
 }
 
 /* Track */

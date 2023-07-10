@@ -286,7 +286,8 @@ input::-webkit-inner-spin-button {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 4px;
+  display: none;
 }
 
 /* Track */
@@ -1369,6 +1370,99 @@ svg {
   z-index: 2;
   width: 80%;
   height: 70%;
+}
+
+.sponsors {
+  padding-bottom: 100px;
+  position: relative;
+}
+.sponsors__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 170px;
+}
+.sponsors__inner-image {
+  width: 100%;
+  height: 128px;
+  max-width: 1146px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-left: auto;
+}
+.sponsors__inner-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.sponsors__inner-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 80px;
+  overflow: auto;
+  padding: 0 60px;
+}
+.sponsorsItem__image {
+  width: 150px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.sponsorsItem__image img {
+  max-width: 100%;
+  max-height: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.bubles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  pointer-events: none;
+}
+.bubles__shape {
+  position: absolute;
+  top: -100px;
+  right: -200px;
+  width: 400px;
+  height: 400px;
+  background: -webkit-gradient(linear, left top, right top, from(#66eba9), color-stop(#6381fd), color-stop(#ce4fba), to(#fa5561));
+  background: linear-gradient(to right, #66eba9, #6381fd, #ce4fba, #fa5561);
+  -webkit-filter: blur(200px);
+          filter: blur(200px);
+  opacity: 0.5;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 @media (max-width: 1160px) {
