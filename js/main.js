@@ -1,23 +1,23 @@
-var menu = document.getElementById("menu");
-var menuBtn = document.getElementById("menuBtn");
-var body = document.body;
+// var menu = document.getElementById("menu");
+// var menuBtn = document.getElementById("menuBtn");
+// var body = document.body;
 
-const closeMenu = () => {
-  menu.classList.remove("active");
-  menuBtn.classList.remove("active");
-  body.classList.remove("active");
-};
+// const closeMenu = () => {
+//   menu.classList.remove("active");
+//   menuBtn.classList.remove("active");
+//   body.classList.remove("active");
+// };
 
-menuBtn.onclick = function () {
-  menu.classList.toggle("active");
-  menuBtn.classList.toggle("active");
-  body.classList.toggle("active");
-};
-window.onclick = function (event) {
-  if (event.target == menu) {
-    closeMenu();
-  }
-};
+// menuBtn.onclick = function () {
+//   menu.classList.toggle("active");
+//   menuBtn.classList.toggle("active");
+//   body.classList.toggle("active");
+// };
+// window.onclick = function (event) {
+//   if (event.target == menu) {
+//     closeMenu();
+//   }
+// };
 
 const header = document.getElementById("header");
 if (header)
@@ -36,35 +36,6 @@ if (header)
 ///
 ///
 /// tabEvents
-const toggleBody = (isClosed) => {
-  if (isClosed) {
-    document.body.classList.add("active");
-    if (menu) closeMenu();
-  } else {
-    document.body.classList.remove("active");
-  }
-};
-document.querySelectorAll(`[data-event="tabEvent"]`).forEach((eventBtn) => {
-  const tab = document.querySelector(eventBtn.getAttribute("data-tab"));
-  if (tab) {
-    eventBtn.onclick = (e) => {
-      e.preventDefault();
-      tab.classList.toggle("active");
-      toggleBody(tab.classList.contains("active"));
-    };
-    tab.onclick = (e) => {
-      if (e.target === e.currentTarget) {
-        tab.classList.toggle("active");
-        toggleBody(tab.classList.contains("active"));
-      }
-    };
-  }
-});
-document.querySelectorAll(`[data-toggle]`).forEach((toggleBtn) => {
-  console.log("btn ->");
-  toggleBtn.onclick = () =>
-    toggleBtn.classList.toggle(toggleBtn.getAttribute("data-toggle"));
-});
 ///
 ///
 ///
@@ -102,3 +73,13 @@ document.querySelectorAll(`[data-toggle]`).forEach((toggleBtn) => {
 //     }
 //   });
 // }
+
+const range = document.getElementById("range");
+const rangeButton = document.getElementById("rangeButton");
+const rangeInfo = document.getElementById("rangeInfo");
+rangeButton.style.left = range.value + "%";
+rangeInfo.style.left = range.value + "%";
+range.addEventListener("input", () => {
+  rangeButton.style.left = range.value + "%";
+  rangeInfo.style.left = range.value + "%";
+});
