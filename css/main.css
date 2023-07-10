@@ -1588,12 +1588,21 @@ svg {
 }
 .about__inner .video {
   width: calc(60% - 15px);
-  margin-left: -100px;
   margin: -30px 0 0 -100px;
 }
 .about__inner .video .ratioImage {
   padding-bottom: 71%;
   width: 99%;
+}
+.about__inner-image {
+  width: calc(60% - 15px);
+  margin: -30px -100px 0 0;
+  border-radius: 98px 0 0 35px;
+  overflow: hidden;
+}
+.about__inner-image .ratioImage {
+  padding-bottom: 58%;
+  width: 100%;
 }
 .about__inner-content {
   width: calc(46% - 15px);
@@ -1640,6 +1649,9 @@ svg {
   -webkit-transform: rotate(0);
           transform: rotate(0);
   background: linear-gradient(314deg, #66eba9 0%, #fa5561 100%);
+}
+.about--rtl .autoContainer {
+  padding: 0 0 0 60px;
 }
 
 .achievement {
