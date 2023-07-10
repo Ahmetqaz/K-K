@@ -186,7 +186,7 @@
   padding: 0.95em 1.2em;
   border: 1px solid transparent;
 
-  color: $black;
+  color: $white;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -247,14 +247,41 @@
       }
     }
   }
-  &--iconright {
-    svg {
-      width: 0.6em;
-      height: 0.6em;
-      margin-left: 1em;
+  &--text {
+    padding: 0.8em 0.6em;
+    font-weight: 400;
+    position: relative;
+    color: rgba($white, 0.3);
+    &:after {
+      content: "";
+      width: 100%;
+      height: 1px;
+      background: rgba($white, 0.3);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      opacity: 0;
+      transform: scale(0);
+      transition: all 0.2s ease;
+    }
+    &.active {
+      color: $white;
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+        background: $white;
+      }
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    &:hover {
+      &:after {
+        opacity: 1;
+        transform: scale(1);
+      }
     }
   }
-
   &:active {
     opacity: 0.7;
   }
@@ -616,8 +643,8 @@
   width: 254px;
   &__border {
     position: absolute;
-    width: calc(100% + 40px);
-    height: calc(100% + 40px);
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
     top: -10px;
     left: -10px;
     img {
@@ -635,7 +662,7 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     z-index: 3;
   }
 }
