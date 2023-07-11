@@ -1836,7 +1836,7 @@ svg {
           align-items: flex-start;
   gap: 46px;
   position: relative;
-  margin: auto 0 0 0;
+  margin: auto 0;
 }
 .hero__inner-box {
   display: -webkit-box;
