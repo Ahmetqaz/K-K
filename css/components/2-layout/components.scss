@@ -933,10 +933,24 @@
   }
 }
 
+@mixin components-1160 {
+  .button {
+    &--primary {
+      &._extra {
+        font-size: 16px;
+        min-width: 160px;
+      }
+    }
+  }
+}
 @mixin components-1025 {
   .button {
     &--primary {
       min-width: 120px;
+      &._extra {
+        font-size: 14px;
+        min-width: 140px;
+      }
     }
   }
   .logo {
@@ -951,6 +965,10 @@
       &._lg {
         gap: 15px;
       }
+      &._extra {
+        font-size: 12px;
+        min-width: 118px;
+      }
     }
   }
   .logo {
@@ -958,12 +976,7 @@
   }
 }
 @mixin components-768 {
-  .button {
-    font-size: 12px;
-    &--primary {
-      min-width: 100px;
-    }
-  }
+
   .logo {
     font-size: 26px;
   }
@@ -981,7 +994,7 @@
   }
   .bubles {
     &__shape {
-      filter: blur(170px);
+      filter: blur(200px);
       width: 350px;
       height: 350px;
     }
@@ -995,6 +1008,11 @@
     &._lg {
       padding: 1em 1.14em 1em 2em;
       line-height: 1.1em;
+    }
+    &._extra {
+      font-size: 10px;
+      min-width: 92px;
+      padding: 1.3em 1.2em
     }
   }
   .logo {

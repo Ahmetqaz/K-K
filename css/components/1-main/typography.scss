@@ -105,6 +105,21 @@ p {
   h1 {
     font-size: 90px;
   }
+  h4 {
+    &._lg {
+      font-size: 42px;
+    }
+  }
+}
+@mixin typography-1160 {
+  h4 {
+    &._lg {
+      font-size: 38px;
+    }
+  }
+  p {
+    font-size: 18px;
+  }
 }
 @mixin typography-1025 {
   h1 {
@@ -113,8 +128,18 @@ p {
       font-size: 1.2em;
     }
   }
+  h4 {
+    &._lg {
+      font-size: 35px;
+    }
+  }
+  h5 {
+    &._extra-sm {
+      font-size: 16px;
+    }
+  }
   p {
-    font-size: 18px;
+    font-size: 16px;
     &._sm {
       font-size: 16px;
     }
@@ -124,10 +149,20 @@ p {
   h1 {
     font-size: 70px;
   }
+  h4 {
+    &._lg {
+      font-size: 32px;
+    }
+  }
 }
 @mixin typography-840 {
   h1 {
     font-size: 60px;
+  }
+  h5 {
+    &._extra-sm {
+      font-size: 14px;
+    }
   }
 }
 @mixin typography-768 {
@@ -135,9 +170,14 @@ p {
     font-size: 50px;
   }
   p {
-    font-size: 16px;
+    font-size: 14px;
     &._sm {
       font-size: 14px;
+    }
+  }
+  h5 {
+    &._extra-sm {
+      font-size: 12px;
     }
   }
 }
@@ -148,11 +188,15 @@ p {
     }
   }
   p {
-    font-size: 14px;
+    font-size: 12px;
     &._sm {
       font-size: 12px;
-    line-height: 1.5em;
-
+      line-height: 1.5em;
+    }
+  }
+  h5 {
+    &._extra-sm {
+      font-size: 10px;
     }
   }
 }

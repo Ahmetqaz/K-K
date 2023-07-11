@@ -1843,6 +1843,9 @@ svg {
   right: -200px;
   background: linear-gradient(222deg, #66eba9, #6381fd, #ce4fba, #fa5561);
 }
+.sponsors .autoContainer {
+  padding: 0;
+}
 
 .about {
   padding: 100px 0;
@@ -1860,7 +1863,7 @@ svg {
           justify-content: space-between;
 }
 .about__inner .video {
-  width: calc(62% - 15px);
+  width: calc(54% + 100px);
   margin: -30px 0 0 -160px;
 }
 .about__inner .video .ratioImage {
@@ -1868,17 +1871,38 @@ svg {
   width: 99%;
 }
 .about__inner-image {
-  width: calc(62% - 15px);
-  margin: -30px -160px 0 0;
-  border-radius: 98px 0 0 35px;
-  overflow: hidden;
+  width: calc(54% + 30px);
+  margin: -30px -90px 0 0;
+  position: relative;
 }
 .about__inner-image .ratioImage {
+  border-radius: 98px 0 0 35px;
+  overflow: hidden;
   padding-bottom: 58%;
   width: 100%;
 }
+.about__inner-image .ratioImage:nth-child(2) {
+  display: none;
+}
+.about__inner-image-parts {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  z-index: 2;
+  left: 30px;
+  top: -27px;
+  display: none;
+  overflow: hidden;
+}
+.about__inner-image-parts._bottom {
+  top: unset;
+  left: unset;
+  right: 16px;
+  bottom: -31px;
+}
 .about__inner-content {
-  width: calc(46% - 15px);
+  width: 46%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1908,13 +1932,14 @@ svg {
   color: rgba(255, 255, 255, 0.6);
   line-height: 1.8em;
   letter-spacing: -0.6px;
+  max-width: 548px;
 }
 .about .bubles__shape {
   right: unset;
   top: unset;
 }
 .about .bubles__shape._yellow {
-  bottom: -40px;
+  bottom: -60px;
   left: -150px;
   -webkit-transform: rotate(0);
           transform: rotate(0);
@@ -1948,10 +1973,10 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 20px;
-  max-width: 1040px;
   margin: 0 auto;
 }
 .achievementItem {
+  width: calc(25% - 10px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2239,10 +2264,53 @@ svg {
   h1 {
     font-size: 90px;
   }
+
+  h4._lg {
+    font-size: 42px;
+  }
+
+  .about__inner .video {
+    width: calc(54% + 110px);
+  }
+  .about__inner .video__box-button {
+    width: 70px;
+    height: 70px;
+  }
+  .about__inner-content {
+    gap: 30px;
+  }
+  .about__inner-box {
+    gap: 20px;
+  }
 }
 @media (max-width: 1160px) {
   .autoContainer {
     padding: 0 40px;
+  }
+
+  h4._lg {
+    font-size: 38px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  .button--primary._extra {
+    font-size: 16px;
+    min-width: 160px;
+  }
+
+  .sponsors {
+    padding-bottom: 80px;
+  }
+
+  .about {
+    padding: 80px 0;
+  }
+
+  .achievement {
+    padding: 70px 0;
   }
 }
 @media (max-width: 1025px) {
@@ -2257,8 +2325,16 @@ svg {
     font-size: 1.2em;
   }
 
+  h4._lg {
+    font-size: 35px;
+  }
+
+  h5._extra-sm {
+    font-size: 16px;
+  }
+
   p {
-    font-size: 18px;
+    font-size: 16px;
   }
   p._sm {
     font-size: 16px;
@@ -2266,6 +2342,10 @@ svg {
 
   .button--primary {
     min-width: 120px;
+  }
+  .button--primary._extra {
+    font-size: 14px;
+    min-width: 140px;
   }
 
   .logo {
@@ -2406,6 +2486,20 @@ svg {
     width: 140px;
     height: 30px;
   }
+
+  .achievement__inner {
+    padding: 50px 30px;
+  }
+  .achievement__inner-row {
+    gap: 15px;
+  }
+  .achievementItem {
+    gap: 15px;
+  }
+  .achievementItem__image {
+    width: 45px;
+    height: 45px;
+  }
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -2414,6 +2508,10 @@ svg {
 
   h1 {
     font-size: 70px;
+  }
+
+  h4._lg {
+    font-size: 32px;
   }
 
   .hero {
@@ -2431,6 +2529,9 @@ svg {
     height: 65px;
   }
 
+  .sponsors {
+    padding-bottom: 60px;
+  }
   .sponsors__inner {
     gap: 130px;
   }
@@ -2445,10 +2546,35 @@ svg {
     width: 130px;
     height: 27px;
   }
+
+  .about {
+    padding: 60px 0;
+  }
+  .about__inner .video {
+    width: calc(54% + 120px);
+  }
+  .about__inner .video__box-button {
+    width: 60px;
+    height: 60px;
+  }
+  .about__inner-content {
+    gap: 20px;
+  }
+  .about__inner-box {
+    gap: 15px;
+  }
+
+  .achievement {
+    padding: 60px 0;
+  }
 }
 @media (max-width: 840px) {
   h1 {
     font-size: 60px;
+  }
+
+  h5._extra-sm {
+    font-size: 14px;
   }
 
   .button {
@@ -2459,6 +2585,10 @@ svg {
   }
   .button--primary._lg {
     gap: 15px;
+  }
+  .button--primary._extra {
+    font-size: 12px;
+    min-width: 118px;
   }
 
   .logo {
@@ -2485,6 +2615,75 @@ svg {
     width: 60px;
     height: 60px;
   }
+
+  .about__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 40px;
+  }
+  .about__inner._lg {
+    gap: 70px;
+  }
+  .about__inner .video {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 700px;
+  }
+  .about__inner .video__box-button {
+    width: 50px;
+    height: 50px;
+  }
+  .about__inner-content {
+    gap: 25px;
+    max-width: 700px;
+    width: 100%;
+  }
+  .about__inner-box {
+    gap: 15px;
+  }
+  .about__inner-image {
+    width: 100%;
+    width: calc(100% + 30px);
+    margin: 0 -30px 0 0;
+  }
+  .about__inner-image .ratioImage {
+    display: none;
+  }
+  .about__inner-image .ratioImage:nth-child(2) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about__inner-image-parts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .about__inner h4 {
+    max-width: 450px;
+  }
+
+  .achievement__inner {
+    padding: 50px 20px;
+  }
+  .achievement__inner-row {
+    gap: 10px;
+  }
+  .achievementItem {
+    width: calc(25% - 5px);
+  }
+  .achievementItem__box {
+    gap: 5px;
+  }
+  .achievementItem__image {
+    width: 40px;
+    height: 40px;
+  }
+  .achievementItem h4._lg {
+    font-size: 28px;
+  }
 }
 @media (max-width: 768px) {
   h1 {
@@ -2492,17 +2691,14 @@ svg {
   }
 
   p {
-    font-size: 16px;
+    font-size: 14px;
   }
   p._sm {
     font-size: 14px;
   }
 
-  .button {
+  h5._extra-sm {
     font-size: 12px;
-  }
-  .button--primary {
-    min-width: 100px;
   }
 
   .logo {
@@ -2547,8 +2743,8 @@ svg {
   }
 
   .bubles__shape {
-    -webkit-filter: blur(170px);
-            filter: blur(170px);
+    -webkit-filter: blur(200px);
+            filter: blur(200px);
     width: 350px;
     height: 350px;
   }
@@ -2570,6 +2766,9 @@ svg {
     display: none;
   }
 
+  .sponsors {
+    padding: 0 0 50px 0;
+  }
   .sponsors__inner {
     gap: 80px;
   }
@@ -2580,6 +2779,50 @@ svg {
     width: 125px;
     height: 23px;
   }
+
+  .about {
+    padding: 50px 0;
+  }
+  .about__inner .video .bubles__shape._yellow {
+    bottom: -170px;
+    left: -100px;
+  }
+
+  .achievement {
+    padding: 50px 0;
+  }
+  .achievement__inner-row {
+    gap: 60px 15px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .achievementItem {
+    width: calc(50% - 10px);
+  }
+  .achievementItem__box {
+    gap: 5px;
+  }
+  .achievementItem__image {
+    width: 40px;
+    height: 40px;
+  }
+  .achievementItem h4._lg {
+    font-size: 28px;
+  }
+  .achievement .bubles__shape {
+    opacity: 1;
+  }
+  .achievement .bubles__shape._pink {
+    right: -300px;
+    top: unset;
+    bottom: -140px;
+  }
+  .achievement .bubles__shape._yellow {
+    top: -140px;
+    right: unset;
+    left: -300px;
+    bottom: unset;
+  }
 }
 @media (max-width: 550px) {
   .header .logo .text {
@@ -2589,6 +2832,35 @@ svg {
   .hero__bg-image._sm {
     width: 90%;
   }
+
+  .achievementItem__image {
+    width: 35px;
+    height: 35px;
+  }
+  .achievementItem h4._lg {
+    font-size: 26px;
+  }
+}
+@media (max-width: 460px) {
+  .about__inner {
+    gap: 32px;
+  }
+  .about__inner .video {
+    width: calc(100% + 70px);
+    margin: 0 0 0 -70px;
+  }
+  .about__inner-image .ratioImage {
+    border-radius: 48px 0 0 17px;
+  }
+  .about__inner-image-parts {
+    width: 62px;
+    height: 62px;
+  }
+
+  .achievementItem__image {
+    width: 30px;
+    height: 30px;
+  }
 }
 @media (max-width: 390px) {
   h1 ._lg {
@@ -2596,11 +2868,15 @@ svg {
   }
 
   p {
-    font-size: 14px;
+    font-size: 12px;
   }
   p._sm {
     font-size: 12px;
     line-height: 1.5em;
+  }
+
+  h5._extra-sm {
+    font-size: 10px;
   }
 
   .button {
@@ -2612,6 +2888,11 @@ svg {
     padding: 1em 1.14em 1em 2em;
     line-height: 1.1em;
   }
+  .button._extra {
+    font-size: 10px;
+    min-width: 92px;
+    padding: 1.3em 1.2em;
+  }
 
   .logo {
     font-size: 22px;
@@ -2619,5 +2900,10 @@ svg {
 
   .hero {
     padding-top: 120px;
+  }
+
+  .achievementItem__image {
+    width: 27px;
+    height: 27px;
   }
 }

@@ -1,10 +1,14 @@
 @media (max-width: 1280px) {
   @include typography-1280;
+  @include index-1280;
 }
 @media (max-width: 1160px) {
   .autoContainer {
     padding: 0 40px;
   }
+  @include typography-1160;
+  @include components-1160;
+  @include index-1160;
 }
 @media (max-width: 1025px) {
   .autoContainer {
@@ -43,6 +47,7 @@
   @include index-550;
 }
 @media (max-width: 460px) {
+  @include index-460;
 }
 @media (max-width: 390px) {
   @include typography-390;
