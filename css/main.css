@@ -468,14 +468,11 @@ svg {
   border-top: unset;
   -webkit-transition: max-height 0.3s ease, border-color 0s ease 0.3s, opacity 0.1s ease 0.2s;
   transition: max-height 0.3s ease, border-color 0s ease 0.3s, opacity 0.1s ease 0.2s;
-  scrollbar-width: none;
-  /* Firefox 64 */
-  -ms-overflow-style: none;
-  /* Internet Explorer 11 */
+  scrollbar-width: none; /* Firefox 64 */
+  -ms-overflow-style: none; /* Internet Explorer 11 */
   z-index: 1;
 }
-.input--select .input__dropdown::-webkit-scrollbar {
-  /** WebKit */
+.input--select .input__dropdown::-webkit-scrollbar { /** WebKit */
   display: none;
 }
 .input--select .input__dropdown-item {
@@ -1545,6 +1542,7 @@ svg {
           transition-duration: 0.5s;
   -webkit-backdrop-filter: blur(30px);
           backdrop-filter: blur(30px);
+  background: rgba(0, 0, 0, 0.6);
 }
 .header.sticky .logo {
   font-size: 28px;
@@ -2404,22 +2402,18 @@ svg {
   h1 {
     font-size: 90px;
   }
-
   h4._extra-lg {
     font-size: 45px;
   }
   h4._lg {
     font-size: 42px;
   }
-
   .list {
     font-size: 16px;
   }
-
   .header__inner {
     padding-left: 60px;
   }
-
   .about__inner .video {
     width: calc(54% + 110px);
   }
@@ -2433,12 +2427,10 @@ svg {
   .about__inner-box {
     gap: 20px;
   }
-
   .benefits__inner-images .bubles__shape._yellow {
     left: -270px;
     bottom: -270px;
   }
-
   .hero__inner {
     padding-left: 60px;
   }
@@ -2447,37 +2439,30 @@ svg {
   .autoContainer {
     padding: 0 40px;
   }
-
   h4._extra-lg {
     font-size: 40px;
   }
   h4._lg {
     font-size: 38px;
   }
-
   p {
     font-size: 18px;
   }
-
   .button--primary._extra {
     font-size: 16px;
   }
   .button--primary._extra-lg {
     font-size: 16px;
   }
-
   .sponsors {
     padding-bottom: 80px;
   }
-
   .about {
     padding: 80px 0;
   }
-
   .achievement {
     padding: 70px 0;
   }
-
   .benefits {
     padding: 80px 0;
   }
@@ -2487,11 +2472,9 @@ svg {
   .benefits .autoContainer {
     padding-right: 40px;
   }
-
   .price {
     padding: 80px 0;
   }
-
   .footer {
     padding-top: 80px;
   }
@@ -2500,21 +2483,18 @@ svg {
   .autoContainer {
     padding: 0 30px;
   }
-
   h1 {
     font-size: 80px;
   }
   h1 ._lg {
     font-size: 1.2em;
   }
-
   h4._extra-lg {
     font-size: 35px;
   }
   h4._lg {
     font-size: 35px;
   }
-
   h5 {
     font-size: 18px;
   }
@@ -2524,14 +2504,12 @@ svg {
   h5._extra-sm {
     font-size: 16px;
   }
-
   p {
     font-size: 16px;
   }
   p._sm {
     font-size: 16px;
   }
-
   .button--primary {
     min-width: 120px;
   }
@@ -2544,19 +2522,15 @@ svg {
   .button--secondary {
     font-size: 20px;
   }
-
   .logo {
     font-size: 30px;
   }
-
   .list {
     font-size: 14px;
   }
-
   .toggle {
     font-size: 13px;
   }
-
   .header {
     padding: 25px 0;
   }
@@ -2575,7 +2549,6 @@ svg {
     z-index: 2;
     left: 15px;
   }
-
   .nav {
     position: fixed;
     top: 0;
@@ -2669,7 +2642,6 @@ svg {
     -webkit-transform: translate(0);
             transform: translate(0);
   }
-
   .hero__inner {
     padding-left: 40px;
   }
@@ -2680,7 +2652,6 @@ svg {
     width: 70px;
     height: 70px;
   }
-
   .sponsors__inner {
     gap: 150px;
   }
@@ -2695,7 +2666,6 @@ svg {
     width: 140px;
     height: 30px;
   }
-
   .achievement__inner {
     padding: 50px 30px;
   }
@@ -2709,7 +2679,6 @@ svg {
     width: 45px;
     height: 45px;
   }
-
   .benefits {
     padding: 80px 0;
   }
@@ -2719,7 +2688,6 @@ svg {
   .benefits .autoContainer {
     padding-right: 30px;
   }
-
   .price__inner-tools {
     padding-bottom: 35px;
   }
@@ -2729,7 +2697,6 @@ svg {
   .price__inner-group-text {
     padding: 35px 0;
   }
-
   .footer__inner {
     padding: 60px;
   }
@@ -2738,18 +2705,15 @@ svg {
   .autoContainer {
     padding: 0 30px;
   }
-
   h1 {
     font-size: 70px;
   }
-
   h4._extra-lg {
     font-size: 32px;
   }
   h4._lg {
     font-size: 32px;
   }
-
   .hero {
     padding-top: 200px;
   }
@@ -2764,7 +2728,6 @@ svg {
     width: 65px;
     height: 65px;
   }
-
   .sponsors {
     padding-bottom: 60px;
   }
@@ -2782,7 +2745,6 @@ svg {
     width: 130px;
     height: 27px;
   }
-
   .about {
     padding: 60px 0;
   }
@@ -2799,15 +2761,12 @@ svg {
   .about__inner-box {
     gap: 15px;
   }
-
   .achievement {
     padding: 60px 0;
   }
-
   .benefits {
     padding: 60px 0;
   }
-
   .price {
     padding: 60px 0;
   }
@@ -2824,7 +2783,6 @@ svg {
   .price__inner-group-text {
     padding: 30px 0;
   }
-
   .footer {
     padding-top: 60px;
   }
@@ -2848,11 +2806,9 @@ svg {
   h1 {
     font-size: 60px;
   }
-
   h5._extra-sm {
     font-size: 14px;
   }
-
   .button {
     font-size: 12px;
   }
@@ -2871,11 +2827,9 @@ svg {
   .button--secondary {
     font-size: 20px;
   }
-
   .logo {
     font-size: 28px;
   }
-
   .header {
     padding: 20px 0;
   }
@@ -2885,7 +2839,6 @@ svg {
   .header.sticky .logo {
     font-size: 26px;
   }
-
   .hero {
     padding-top: 170px;
   }
@@ -2899,7 +2852,6 @@ svg {
     width: 60px;
     height: 60px;
   }
-
   .about__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -2951,7 +2903,6 @@ svg {
   .about__inner h4 {
     max-width: 450px;
   }
-
   .achievement__inner {
     padding: 50px 20px;
   }
@@ -2971,7 +2922,6 @@ svg {
   .achievementItem h4._lg {
     font-size: 28px;
   }
-
   .benefits__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3016,7 +2966,6 @@ svg {
   .benefits .autoContainer {
     padding: 0 30px;
   }
-
   .price__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3053,26 +3002,21 @@ svg {
   h1 {
     font-size: 50px;
   }
-
   p {
     font-size: 14px;
   }
   p._sm {
     font-size: 14px;
   }
-
   h5._extra-sm {
     font-size: 12px;
   }
-
   h6._lg {
     font-size: 12px;
   }
-
   .logo {
     font-size: 26px;
   }
-
   .hero {
     padding-top: 150px;
   }
@@ -3086,7 +3030,6 @@ svg {
     width: 55px;
     height: 55px;
   }
-
   .sponsors__inner {
     gap: 100px;
   }
@@ -3100,7 +3043,6 @@ svg {
     width: 130px;
     height: 25px;
   }
-
   .footer__inner {
     padding: 30px;
   }
@@ -3121,18 +3063,15 @@ svg {
   .button--primary::before {
     border: 1px solid transparent;
   }
-
   .logo {
     font-size: 24px;
   }
-
   .bubles__shape {
     -webkit-filter: blur(200px);
             filter: blur(200px);
     width: 350px;
     height: 350px;
   }
-
   .list .bubles {
     -webkit-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
@@ -3157,7 +3096,6 @@ svg {
     left: -50px;
     bottom: -50px;
   }
-
   .hero {
     padding-top: 135px;
   }
@@ -3174,7 +3112,6 @@ svg {
   .hero .video__border {
     display: none;
   }
-
   .sponsors {
     padding: 0 0 50px 0;
   }
@@ -3188,7 +3125,6 @@ svg {
     width: 125px;
     height: 23px;
   }
-
   .about {
     padding: 50px 0;
   }
@@ -3196,7 +3132,6 @@ svg {
     bottom: -170px;
     left: -100px;
   }
-
   .achievement {
     padding: 50px 0;
   }
@@ -3232,7 +3167,6 @@ svg {
     left: -300px;
     bottom: unset;
   }
-
   .benefits {
     padding: 80px 0 50px;
   }
@@ -3244,14 +3178,12 @@ svg {
     left: -100px;
     bottom: -50px;
   }
-
   .price {
     padding: 50px 0;
   }
   .price__inner-image .ratioImage {
     padding-bottom: 120%;
   }
-
   .footer {
     padding-top: 50px;
   }
@@ -3298,14 +3230,12 @@ svg {
   .header.sticky .logo {
     font-size: 20px;
   }
-
   .sidebar__inner {
     padding: 50px 30px;
   }
   .sidebar__inner-link {
     font-size: 16px;
   }
-
   .hero__inner {
     padding-left: 0;
   }
@@ -3318,7 +3248,6 @@ svg {
   .hero__bg-image._sm {
     width: 90%;
   }
-
   .achievementItem__image {
     width: 35px;
     height: 35px;
@@ -3331,7 +3260,6 @@ svg {
   .toggle__text {
     font-size: 14px;
   }
-
   .about__inner {
     gap: 32px;
   }
@@ -3347,12 +3275,10 @@ svg {
     width: 62px;
     height: 62px;
   }
-
   .achievementItem__image {
     width: 30px;
     height: 30px;
   }
-
   .benefitsImage._lg .ratioImage {
     padding-bottom: 72%;
     border-radius: 0 54px 19px 0;
@@ -3380,7 +3306,6 @@ svg {
     -webkit-filter: blur(10px);
             filter: blur(10px);
   }
-
   .price__inner-tools {
     padding-bottom: 22px;
   }
@@ -3407,7 +3332,6 @@ svg {
     font-weight: 500;
     margin-top: unset;
   }
-
   p {
     font-size: 12px;
   }
@@ -3415,7 +3339,6 @@ svg {
     font-size: 12px;
     line-height: 1.5em;
   }
-
   h5 {
     font-size: 15px;
   }
@@ -3425,11 +3348,9 @@ svg {
   h5._extra-sm {
     font-size: 10px;
   }
-
   h6._lg {
     font-size: 10px;
   }
-
   .button {
     font-size: 10px;
     min-width: 92px;
@@ -3446,15 +3367,12 @@ svg {
     font-size: 17px;
     padding: 0.87em 1.2em;
   }
-
   .logo {
     font-size: 22px;
   }
-
   .list {
     font-size: 12px;
   }
-
   .range {
     padding-bottom: 45px;
   }
@@ -3484,7 +3402,6 @@ svg {
   .range input[type=range]::-webkit-slider-runnable-track {
     height: 6px;
   }
-
   .toggle {
     gap: 8px;
   }
@@ -3505,16 +3422,13 @@ svg {
     -webkit-transform: translate(10px, -50%);
             transform: translate(10px, -50%);
   }
-
   .hero {
     padding-top: 120px;
   }
-
   .achievementItem__image {
     width: 27px;
     height: 27px;
   }
-
   .footer__inner-column {
     width: -webkit-fit-content;
     width: -moz-fit-content;

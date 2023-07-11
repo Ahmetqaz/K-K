@@ -31,6 +31,7 @@
     animation: 0.3s sticky ease-in;
     transition-duration: 0.5s;
     backdrop-filter: blur(30px);
+    background: rgba($black, 0.6);
     .logo {
       font-size: 28px;
     }
