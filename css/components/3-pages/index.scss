@@ -125,7 +125,6 @@
       align-items: center;
       gap: 80px;
       overflow: auto;
-      padding: 0 60px;
     }
   }
   &Item {
@@ -482,6 +481,12 @@
     }
   }
 }
+.swiper{
+  &-slide{
+    width: auto !important;
+    margin: 0 25px;
+  }
+}
 
 @mixin index-1280 {
   .about {
@@ -572,7 +577,6 @@
       }
       &-row {
         gap: 70px;
-        padding: 0 40px;
       }
     }
     &Item {
@@ -650,7 +654,6 @@
       }
       &-row {
         gap: 60px;
-        padding: 0 30px;
       }
     }
     &Item {
@@ -658,6 +661,11 @@
         width: 130px;
         height: 27px;
       }
+    }
+  }
+  .swiper{
+    &-slide{
+      margin: 0 20px;
     }
   }
   .about {
@@ -920,6 +928,11 @@
         width: 130px;
         height: 25px;
       }
+    }
+  }
+  .swiper{
+    &-slide{
+      margin: 0 15px;
     }
   }
 }
