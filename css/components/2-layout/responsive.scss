@@ -46,9 +46,9 @@
 }
 @media (max-width: 668px) {
   @include components-668;
+  @include header-668;
   @include index-668;
   @include footer-668;
-
 }
 @media (max-width: 550px) {
   @include header-550;

@@ -1789,10 +1789,9 @@ svg {
 
 .hero {
   position: relative;
-  padding: 100px 0 32px;
   height: 100vh;
   height: 100dvh;
-  min-height: 990px;
+  min-height: 950px;
 }
 .hero__inner {
   display: -webkit-box;
@@ -1806,8 +1805,8 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  gap: 80px;
-  padding-left: 80px;
+  gap: 50px;
+  padding: 140px 0 32px 80px;
 }
 .hero__inner-group {
   display: -webkit-box;
@@ -1835,6 +1834,7 @@ svg {
           align-items: flex-start;
   gap: 46px;
   position: relative;
+  margin: auto 0;
 }
 .hero__inner-box {
   display: -webkit-box;
@@ -1964,7 +1964,6 @@ svg {
           align-items: center;
   gap: 80px;
   overflow: auto;
-  padding: 0 60px;
 }
 .sponsorsItem {
   -webkit-transition: all 0.2s ease-in-out 0s;
@@ -2398,6 +2397,11 @@ svg {
   background: linear-gradient(215deg, #66eba9, #6381fd, #ce4fba, #fa5561);
 }
 
+.swiper-slide {
+  width: auto !important;
+  margin: 0 30px;
+}
+
 @media (max-width: 1280px) {
   h1 {
     font-size: 90px;
@@ -2431,8 +2435,11 @@ svg {
     left: -270px;
     bottom: -270px;
   }
+  .hero {
+    min-height: 850px;
+  }
   .hero__inner {
-    padding-left: 60px;
+    padding: 140px 0 32px 60px;
   }
 }
 @media (max-width: 1160px) {
@@ -2643,7 +2650,7 @@ svg {
             transform: translate(0);
   }
   .hero__inner {
-    padding-left: 40px;
+    padding: 120px 0 32px 45px;
   }
   .hero .video {
     width: 240px;
@@ -2660,7 +2667,6 @@ svg {
   }
   .sponsors__inner-row {
     gap: 70px;
-    padding: 0 40px;
   }
   .sponsorsItem__image {
     width: 140px;
@@ -2715,10 +2721,10 @@ svg {
     font-size: 32px;
   }
   .hero {
-    padding-top: 200px;
+    min-height: 750px;
   }
   .hero__inner {
-    gap: 70px;
+    padding: 100px 0 32px 45px;
   }
   .hero .video {
     width: 220px;
@@ -2739,11 +2745,13 @@ svg {
   }
   .sponsors__inner-row {
     gap: 60px;
-    padding: 0 30px;
   }
   .sponsorsItem__image {
     width: 130px;
     height: 27px;
+  }
+  .swiper-slide {
+    margin: 0 20px;
   }
   .about {
     padding: 60px 0;
@@ -2840,10 +2848,7 @@ svg {
     font-size: 26px;
   }
   .hero {
-    padding-top: 170px;
-  }
-  .hero__inner {
-    gap: 60px;
+    min-height: 700px;
   }
   .hero .video {
     width: 200px;
@@ -3018,7 +3023,7 @@ svg {
     font-size: 26px;
   }
   .hero {
-    padding-top: 150px;
+    min-height: 600px;
   }
   .hero__inner {
     gap: 40px;
@@ -3042,6 +3047,9 @@ svg {
   .sponsorsItem__image {
     width: 130px;
     height: 25px;
+  }
+  .swiper-slide {
+    margin: 0 15px;
   }
   .footer__inner {
     padding: 30px;
@@ -3096,8 +3104,20 @@ svg {
     left: -50px;
     bottom: -50px;
   }
-  .hero {
-    padding-top: 135px;
+  .header__inner {
+    padding-left: 0;
+  }
+  .header__inner .burger {
+    z-index: 2;
+    left: 0;
+    position: relative;
+    -webkit-transform: unset;
+            transform: unset;
+    width: 22px;
+    height: 10px;
+  }
+  .hero__inner {
+    padding-left: 0;
   }
   .hero__inner-tabs {
     display: none;
@@ -3212,18 +3232,6 @@ svg {
   }
 }
 @media (max-width: 550px) {
-  .header__inner {
-    padding-left: 0;
-  }
-  .header__inner .burger {
-    z-index: 2;
-    left: 0;
-    position: relative;
-    -webkit-transform: unset;
-            transform: unset;
-    width: 22px;
-    height: 10px;
-  }
   .header .logo .text {
     display: none;
   }
@@ -3235,9 +3243,6 @@ svg {
   }
   .sidebar__inner-link {
     font-size: 16px;
-  }
-  .hero__inner {
-    padding-left: 0;
   }
   .hero__inner-footer {
     gap: 40px;
@@ -3421,9 +3426,6 @@ svg {
   .toggle__switch input:checked + .toggle__switch-slider:before {
     -webkit-transform: translate(10px, -50%);
             transform: translate(10px, -50%);
-  }
-  .hero {
-    padding-top: 120px;
   }
   .achievementItem__image {
     width: 27px;
