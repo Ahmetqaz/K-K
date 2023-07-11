@@ -1,4 +1,5 @@
 @media (max-width: 1280px) {
+  @include typography-1280;
 }
 @media (max-width: 1160px) {
   .autoContainer {
@@ -9,23 +10,42 @@
   .autoContainer {
     padding: 0 30px;
   }
+  @include typography-1025;
+  @include components-1025;
   @include header-1025;
+  @include index-1025;
 }
 
 @media (max-width: 940px) {
   .autoContainer {
-    padding: 0 25px;
+    padding: 0 30px;
   }
+  @include typography-940;
+  @include index-940;
+}
+@media (max-width: 840px) {
+  @include typography-840;
+  @include components-840;
+  @include header-840;
+  @include index-840;
 }
 @media (max-width: 768px) {
-  .autoContainer {
-    padding: 0 15px;
-  }
+  @include typography-768;
+  @include components-768;
+  @include index-768;
 }
-@media (max-width: 580px) {
-  ._hideMob {
-    display: none;
-  }
+@media (max-width: 668px) {
+  @include components-668;
+  @include index-668;
+}
+@media (max-width: 550px) {
+  @include header-550;
+  @include index-550;
 }
 @media (max-width: 460px) {
+}
+@media (max-width: 390px) {
+  @include typography-390;
+  @include components-390;
+  @include index-390;
 }

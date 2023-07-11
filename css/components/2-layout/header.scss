@@ -247,3 +247,21 @@
     }
   }
 }
+@mixin header-840 {
+  .header {
+    padding: 20px 0;
+
+    &.sticky {
+      padding: 15px 0;
+    }
+  }
+}
+@mixin header-550 {
+  .header {
+    .logo {
+      .text {
+        display: none;
+      }
+    }
+  }
+}

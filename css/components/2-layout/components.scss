@@ -192,6 +192,7 @@
   font-size: 14px;
   line-height: 1;
   transition: all 0.3s ease;
+  font-family: $font-primary;
 
   &--primary {
     display: flex;
@@ -263,7 +264,7 @@
     border: unset;
     &:hover {
       opacity: 0.8;
-      background-size:150% 100%;
+      background-size: 150% 100%;
       background-position: 20%;
     }
   }
@@ -712,6 +713,10 @@
       &:hover {
         opacity: 0.7;
       }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 }
@@ -852,4 +857,147 @@
     }
   }
   padding-bottom: 66px;
+}
+.bubles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -2;
+  pointer-events: none;
+  &__shape {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 400px;
+    height: 400px;
+    background: $gradient;
+    filter: blur(200px);
+    opacity: 0.5;
+    &._yellow {
+      background: $gradient-4;
+    }
+  }
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  h6 {
+    color: $secondary;
+  }
+}
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 18px;
+  position: relative;
+  z-index: 2;
+  &__item {
+    position: relative;
+    background: rgba($black, 0.5);
+    border-radius: 18px;
+    padding: 1.1em 1.3em;
+    overflow: hidden;
+    line-height: 1.6em;
+    cursor: pointer;
+    &:hover {
+      .bubles {
+        opacity: 1;
+      }
+    }
+  }
+  .bubles {
+    @include transition;
+    opacity: 0;
+    &__shape {
+      opacity: 1;
+      width: 300px;
+      height: 300px;
+      &._pink {
+        right: -300px;
+        top: unset;
+        bottom: -150px;
+        background: linear-gradient(243deg, #66eba9, #6381fd, #ce4fba, #fa5561);
+      }
+      &._yellow {
+        top: unset;
+        right: unset;
+        left: -300px;
+        bottom: -150px;
+        background: linear-gradient(54deg, #66eba9 0%, #fa5561 100%);
+      }
+    }
+  }
+}
+
+@mixin components-1025 {
+  .button {
+    &--primary {
+      min-width: 120px;
+    }
+  }
+  .logo {
+    font-size: 30px;
+  }
+}
+@mixin components-840 {
+  .button {
+    font-size: 12px;
+    &--primary {
+      min-width: 100px;
+      &._lg {
+        gap: 15px;
+      }
+    }
+  }
+  .logo {
+    font-size: 28px;
+  }
+}
+@mixin components-768 {
+  .button {
+    font-size: 12px;
+    &--primary {
+      min-width: 100px;
+    }
+  }
+  .logo {
+    font-size: 26px;
+  }
+}
+@mixin components-668 {
+  .button {
+    &--primary {
+      &::before {
+        border: 1px solid transparent;
+      }
+    }
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .bubles {
+    &__shape {
+      filter: blur(170px);
+      width: 350px;
+      height: 350px;
+    }
+  }
+}
+@mixin components-390 {
+  .button {
+    font-size: 10px;
+    min-width: 92px;
+    padding: 0.99em 1.2em;
+    &._lg {
+      padding: 1em 1.14em 1em 2em;
+      line-height: 1.1em;
+    }
+  }
+  .logo {
+    font-size: 22px;
+  }
 }

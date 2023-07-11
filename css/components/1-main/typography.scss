@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500&display=swap");
 @font-face {
@@ -15,8 +15,9 @@
 h1 {
   font-size: 104px;
   text-transform: uppercase;
+  word-break: break-word;
   ._lg {
-    font-size: 142px;
+    font-size: 1.36em;
     text-transform: lowercase;
     font-style: italic;
   }
@@ -98,5 +99,60 @@ p {
   font-weight: 400;
   &._sm {
     font-size: 18px;
+  }
+}
+@mixin typography-1280 {
+  h1 {
+    font-size: 90px;
+  }
+}
+@mixin typography-1025 {
+  h1 {
+    font-size: 80px;
+    ._lg {
+      font-size: 1.2em;
+    }
+  }
+  p {
+    font-size: 18px;
+    &._sm {
+      font-size: 16px;
+    }
+  }
+}
+@mixin typography-940 {
+  h1 {
+    font-size: 70px;
+  }
+}
+@mixin typography-840 {
+  h1 {
+    font-size: 60px;
+  }
+}
+@mixin typography-768 {
+  h1 {
+    font-size: 50px;
+  }
+  p {
+    font-size: 16px;
+    &._sm {
+      font-size: 14px;
+    }
+  }
+}
+@mixin typography-390 {
+  h1 {
+    ._lg {
+      font-weight: 500;
+    }
+  }
+  p {
+    font-size: 14px;
+    &._sm {
+      font-size: 12px;
+    line-height: 1.5em;
+
+    }
   }
 }
