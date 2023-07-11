@@ -38,7 +38,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -2;
+    z-index: -1;
     pointer-events: none;
     &-image {
       width: 100%;
@@ -425,6 +425,7 @@
     }
     &-image {
       width: calc(45% - 15px);
+      position: relative;
       .ratioImage {
         padding-bottom: 135%;
       }
@@ -446,7 +447,6 @@
         }
       }
       .button {
-        padding: 0.87em 1.2em;
         width: 100%;
       }
     }
@@ -454,6 +454,13 @@
       display: flex;
       flex-direction: column;
       gap: 18px;
+    }
+  }
+  .bubles {
+    &__shape {
+      top: -50px;
+      right: -200px;
+      background: linear-gradient(215deg, #66eba9, #6381fd, #ce4fba, #fa5561);
     }
   }
 }
@@ -478,6 +485,20 @@
       }
     }
   }
+  .benefits {
+    &__inner {
+      &-images {
+        .bubles {
+          &__shape {
+            &._yellow {
+              left: -270px;
+              bottom: -270px;
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @mixin index-1160 {
   .sponsors {
@@ -499,6 +520,9 @@
     .autoContainer {
       padding-right: 40px;
     }
+  }
+  .price {
+    padding: 80px 0;
   }
 }
 @mixin index-1025 {
@@ -555,6 +579,21 @@
     }
     .autoContainer {
       padding-right: 30px;
+    }
+  }
+  .price {
+    &__inner {
+      &-tools {
+        padding-bottom: 35px;
+      }
+      &-content {
+        gap: 55px;
+      }
+      &-group {
+        &-text {
+          padding: 35px 0;
+        }
+      }
     }
   }
 }
@@ -619,6 +658,26 @@
   }
   .benefits {
     padding: 60px 0;
+  }
+  .price {
+    padding: 60px 0;
+    &__inner {
+      &-tools {
+        padding-bottom: 35px;
+      }
+      &-content {
+        width: calc(50% - 15px);
+        gap: 40px;
+      }
+      &-image {
+        width: calc(50% - 15px);
+      }
+      &-group {
+        &-text {
+          padding: 30px 0;
+        }
+      }
+    }
   }
 }
 @mixin index-840 {
@@ -767,6 +826,43 @@
       padding: 0 30px;
     }
   }
+  .price {
+    &__inner {
+      flex-direction: column;
+      gap: 55px;
+      &-box {
+        h4 {
+          max-width: 500px;
+        }
+        p {
+          max-width: unset;
+        }
+      }
+      &-body {
+        margin: 0 auto;
+        width: 100%;
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+        gap: 35px;
+      }
+      &-image {
+        width: 100%;
+        .ratioImage {
+          padding-bottom: 100%;
+        }
+        .bubles{
+          display: none;
+        }
+      }
+      &-group {
+        &-text {
+        }
+      }
+    }
+   
+  }
 }
 @mixin index-768 {
   .hero {
@@ -893,6 +989,31 @@
   }
   .benefits {
     padding: 80px 0 50px;
+    &__inner {
+      &-images {
+        .bubles {
+          &__shape {
+            &._yellow {
+              width: 250px;
+              height: 250px;
+              filter: blur(120px);
+              left: -100px;
+              bottom: -50px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .price {
+    padding: 50px 0;
+    &__inner {
+      &-image {
+        .ratioImage {
+          padding-bottom: 120%;
+        }
+      }
+    }
   }
 }
 @mixin index-550 {
@@ -979,6 +1100,32 @@
             }
           }
         }
+      }
+    }
+  }
+  .price {
+    &__inner {
+      &-tools {
+        padding-bottom: 22px;
+      }
+      &-box {
+        gap: 10px;
+      }
+      &-image {
+        .ratioImage {
+          padding-bottom: 145%;
+        }
+      }
+      &-group {
+        &-text {
+          padding: 32px 0 28px;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+      &-wrapper{
+        gap: 10px;
+        flex-wrap: wrap;
       }
     }
   }

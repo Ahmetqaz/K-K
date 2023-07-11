@@ -10,6 +10,7 @@
   @include typography-1160;
   @include components-1160;
   @include index-1160;
+  @include footer-1160;
 }
 @media (max-width: 1025px) {
   .autoContainer {
@@ -19,14 +20,16 @@
   @include components-1025;
   @include header-1025;
   @include index-1025;
-}
+  @include footer-1025;
 
+}
 @media (max-width: 940px) {
   .autoContainer {
     padding: 0 30px;
   }
   @include typography-940;
   @include index-940;
+  @include footer-940;
 }
 @media (max-width: 840px) {
   @include typography-840;
@@ -38,20 +41,25 @@
   @include typography-768;
   @include components-768;
   @include index-768;
+  @include footer-768;
 }
 @media (max-width: 668px) {
   @include components-668;
   @include index-668;
+  @include footer-668;
+
 }
 @media (max-width: 550px) {
   @include header-550;
   @include index-550;
 }
 @media (max-width: 460px) {
+  @include components-460;
   @include index-460;
 }
 @media (max-width: 390px) {
   @include typography-390;
   @include components-390;
   @include index-390;
+  @include footer-390;
 }

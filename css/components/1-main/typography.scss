@@ -143,6 +143,10 @@ p {
     }
   }
   h5 {
+    font-size: 18px;
+    &._lg {
+      font-size: 20px;
+    }
     &._extra-sm {
       font-size: 16px;
     }
@@ -212,9 +216,14 @@ p {
     }
   }
   h5 {
+    font-size: 15px;
+    &._lg {
+      font-size: 17px;
+    }
     &._extra-sm {
       font-size: 10px;
     }
+   
   }
   h6 {
     &._lg {

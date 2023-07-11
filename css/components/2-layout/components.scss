@@ -243,13 +243,11 @@
     }
     &._extra {
       font-size: 18px;
-      padding: 1em 1.2em;
-      min-width: 170px;
+      padding: 1em 2.4em;
     }
     &._extra-lg {
       font-size: 18px;
-      padding: 1em 1.2em;
-      min-width: 200px;
+      padding: 1em 2em;
     }
     &:hover {
       &:after {
@@ -262,6 +260,8 @@
     background: $gradient;
     border-radius: 88px;
     border: unset;
+    padding: 0.87em 1.2em;
+
     &:hover {
       opacity: 0.8;
       background-size: 150% 100%;
@@ -644,6 +644,9 @@
       object-fit: contain;
     }
   }
+  .text {
+    font-weight: 700;
+  }
 }
 .ico {
   color: $white;
@@ -724,6 +727,10 @@
   display: flex;
   align-items: center;
   gap: 12px;
+  &__body {
+    display: flex;
+    align-items: center;
+  }
   &__switch {
     position: relative;
     display: inline-block;
@@ -816,7 +823,7 @@
     bottom: 0;
     left: 50%;
     position: absolute;
-    padding: 8px 20px;
+    padding: 13px 20px;
     border-radius: 7px;
     background: rgba($black, 0.5);
     font-size: 18px;
@@ -824,6 +831,11 @@
     overflow: hidden;
     white-space: nowrap;
     transform: translateX(-50%);
+    line-height: 1em;
+    span {
+      position: relative;
+      z-index: 2;
+    }
     .bubles {
       @include transition;
       z-index: 0;
@@ -872,7 +884,8 @@
     right: 0;
     width: 400px;
     height: 400px;
-    background: $gradient;
+    background: linear-gradient(215deg, #66eba9, #6381fd, #ce4fba, #fa5561);
+
     filter: blur(200px);
     opacity: 0.5;
     &._yellow {
@@ -972,7 +985,9 @@
     &--primary {
       &._extra {
         font-size: 16px;
-        min-width: 160px;
+      }
+      &._extra-lg {
+        font-size: 16px;
       }
     }
   }
@@ -983,8 +998,13 @@
       min-width: 120px;
       &._extra {
         font-size: 14px;
-        min-width: 140px;
       }
+      &._extra-lg {
+        font-size: 14px;
+      }
+    }
+    &--secondary {
+      font-size: 20px;
     }
   }
   .logo {
@@ -993,7 +1013,11 @@
   .list {
     font-size: 14px;
   }
+  .toggle {
+    font-size: 13px;
+  }
 }
+
 @mixin components-840 {
   .button {
     font-size: 12px;
@@ -1004,8 +1028,13 @@
       }
       &._extra {
         font-size: 12px;
-        min-width: 118px;
       }
+      &._extra-lg {
+        font-size: 12px;
+      }
+    }
+    &--secondary {
+      font-size: 20px;
     }
   }
   .logo {
@@ -1019,6 +1048,7 @@
 }
 @mixin components-668 {
   .button {
+    border-radius: 61px;
     &--primary {
       &::before {
         border: 1px solid transparent;
@@ -1060,19 +1090,32 @@
     }
   }
 }
+@mixin components-460 {
+  .toggle {
+    &__text {
+      font-size: 14px;
+    }
+  }
+}
 @mixin components-390 {
   .button {
     font-size: 10px;
     min-width: 92px;
     padding: 0.99em 1.2em;
-    &._lg {
-      padding: 1em 1.14em 1em 2em;
-      line-height: 1.1em;
+    &--primary {
+      &._lg {
+        padding: 1em 1.14em 1em 2em;
+        line-height: 1.1em;
+      }
+      &._extra {
+        padding: 1em;
+      }
+      &._extra-lg {
+      }
     }
-    &._extra {
-      font-size: 10px;
-      min-width: 92px;
-      padding: 1.3em 1.2em;
+    &--secondary {
+      font-size: 17px;
+      padding: 0.87em 1.2em;
     }
   }
   .logo {
@@ -1080,5 +1123,61 @@
   }
   .list {
     font-size: 12px;
+  }
+  .range {
+    padding-bottom: 45px;
+    &__line {
+      &-button {
+        width: 24px;
+        height: 24px;
+      }
+    }
+    &__info {
+      font-size: 12px;
+      padding: 9px 14px;
+      .bubles {
+        &__shape {
+          width: 100px;
+          height: 100px;
+          opacity: 0.4;
+          &._yellow {
+            filter: blur(30px);
+            left: -70px;
+          }
+          &._pink {
+            right: -70px;
+            filter: blur(30px);
+          }
+        }
+      }
+    }
+    input[type="range"] {
+      &::-webkit-slider-runnable-track {
+        height: 6px;
+      }
+    }
+  }
+  .toggle {
+    gap: 8px;
+    &__text {
+      font-size: 12px;
+    }
+    &__switch {
+      width: 25px;
+      height: 16px;
+      border-radius: 49px;
+      &-slider {
+        &::before {
+          width: 11px;
+          height: 11px;
+          left: 2px;
+        }
+      }
+      input {
+        &:checked + .toggle__switch-slider:before {
+          transform: translate(10px, -50%);
+        }
+      }
+    }
   }
 }

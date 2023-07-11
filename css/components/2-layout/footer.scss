@@ -27,6 +27,7 @@
       position: relative;
       font-size: 18px;
       font-weight: 400;
+      line-height: 1em;
       &:after {
         content: "";
         width: 0;
@@ -76,5 +77,101 @@
   }
   .autoContainer {
     padding: 0 20px;
+  }
+}
+
+@mixin footer-1160 {
+  .footer {
+    padding-top: 80px;
+  }
+}
+@mixin footer-1025 {
+  .footer {
+    &__inner {
+      padding: 60px;
+    }
+  }
+}
+@mixin footer-940 {
+  .footer {
+    padding-top: 60px;
+    &__inner {
+      padding: 45px;
+      &-column {
+        gap: 28px;
+      }
+      &-link {
+        font-size: 16px;
+      }
+      &-copy {
+        font-size: 16px;
+      }
+    }
+    .logo {
+      margin-bottom: 25px;
+    }
+  }
+}
+@mixin footer-768 {
+  .footer {
+    &__inner {
+      padding: 30px;
+      &-column {
+        gap: 22px;
+      }
+      &-link {
+        font-size: 14px;
+      }
+      &-copy {
+        font-size: 14px;
+      }
+    }
+  }
+}
+@mixin footer-668 {
+  .footer {
+    padding-top: 50px;
+    &__inner {
+      padding: 26px;
+      border-radius: 13px;
+      flex-direction: column;
+      gap: 64px;
+      &-row {
+        flex-wrap: wrap;
+        gap: 68px 30px;
+      }
+      &-column {
+        width: calc(50% - 15px);
+      }
+    }
+    .logo {
+      margin-bottom: 0;
+    }
+    .autoContainer {
+      padding: 0 10px;
+    }
+    .footer{
+      &__shape{
+        
+      }
+    }
+  }
+}
+@mixin footer-390 {
+  .footer {
+    &__inner {
+      &-row {
+      }
+      &-column {
+        // width: calc(50% - 10px);
+        width: fit-content;
+      }
+      &-link {
+        font-size: 12px;
+      }
+      &-copy {
+        font-size: 12px;
+      }
+    }
   }
 }
