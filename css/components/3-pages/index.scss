@@ -38,7 +38,7 @@
     height: 100%;
     top: 0;
     left: 0;
-    z-index: -1;
+    z-index: -2;
     pointer-events: none;
     &-image {
       width: 100%;
@@ -333,6 +333,11 @@
       .ratioImage {
         border-radius: 0 98px 35px 0;
         overflow: hidden;
+        img {
+          &:nth-child(2) {
+            display: none;
+          }
+        }
       }
     }
     &._sm {
@@ -350,6 +355,9 @@
             opacity: 0.4;
             z-index: -1;
             filter: blur(33px);
+          }
+          &:nth-child(3) {
+            display: none;
           }
         }
       }
@@ -372,40 +380,15 @@
           z-index: -1;
           filter: blur(33px);
         }
+        &:nth-child(3) {
+          display: none;
+        }
       }
     }
   }
   .autoContainer {
     padding: 0 60px 0 0;
     max-width: 1440px;
-  }
-}
-.wrapper {
-  position: relative;
-  &__bg {
-    position: absolute;
-    width: 100%;
-    height: 654px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-      background: rgba(0, 0, 0, 0.74);
-      backdrop-filter: blur(15px);
-    }
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
   }
 }
 .price {
@@ -506,6 +489,17 @@
   .achievement {
     padding: 70px 0;
   }
+  .benefits {
+    padding: 80px 0;
+    &__inner {
+      &-content {
+        gap: 30px;
+      }
+    }
+    .autoContainer {
+      padding-right: 40px;
+    }
+  }
 }
 @mixin index-1025 {
   .hero {
@@ -550,6 +544,17 @@
         width: 45px;
         height: 45px;
       }
+    }
+  }
+  .benefits {
+    padding: 80px 0;
+    &__inner {
+      &-content {
+        gap: 20px;
+      }
+    }
+    .autoContainer {
+      padding-right: 30px;
     }
   }
 }
@@ -612,6 +617,9 @@
   .achievement {
     padding: 60px 0;
   }
+  .benefits {
+    padding: 60px 0;
+  }
 }
 @mixin index-840 {
   .hero {
@@ -654,6 +662,9 @@
       }
       &-box {
         gap: 15px;
+        p {
+          max-width: unset;
+        }
       }
       &-image {
         width: 100%;
@@ -695,6 +706,65 @@
           font-size: 28px;
         }
       }
+    }
+  }
+  .benefits {
+    &__inner {
+      flex-direction: column;
+      gap: 70px;
+      &-images {
+        width: calc(100% + 30px);
+        margin-left: -30px;
+      }
+      &-content {
+        width: 100%;
+        max-width: unset;
+      }
+    }
+    &Image {
+      &._lg {
+        .ratioImage {
+          img {
+            display: none;
+            &:nth-child(2) {
+              display: block;
+            }
+          }
+        }
+      }
+      &._sm {
+        .ratioImage {
+          img {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              filter: blur(20px);
+            }
+            &:nth-child(3) {
+              display: block;
+            }
+          }
+        }
+      }
+      &._extra-sm {
+        .ratioImage {
+          img {
+            &:nth-child(1) {
+              display: none;
+            }
+            &:nth-child(2) {
+              filter: blur(20px);
+            }
+            &:nth-child(3) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    .autoContainer {
+      padding: 0 30px;
     }
   }
 }
@@ -821,6 +891,9 @@
       }
     }
   }
+  .benefits {
+    padding: 80px 0 50px;
+  }
 }
 @mixin index-550 {
   .hero {
@@ -855,8 +928,9 @@
         margin: 0 0 0 -70px;
       }
       &-image {
-        .ratioImage{
+        .ratioImage {
           border-radius: 48px 0 0 17px;
+          padding-bottom: 64%;
         }
         &-parts {
           width: 62px;
@@ -870,6 +944,41 @@
       &__image {
         width: 30px;
         height: 30px;
+      }
+    }
+  }
+  .benefits {
+    &Image {
+      &._lg {
+        .ratioImage {
+          padding-bottom: 72%;
+          border-radius: 0 54px 19px 0;
+        }
+      }
+      &._sm {
+        width: 39%;
+        top: -20px;
+        left: -35px;
+        .ratioImage {
+          border-radius: 12px;
+          img {
+            &:nth-child(2) {
+              filter: blur(10px);
+            }
+          }
+        }
+      }
+      &._extra-sm {
+        bottom: -16px;
+        right: 30px;
+        .ratioImage {
+          border-radius: 12px;
+          img {
+            &:nth-child(2) {
+              filter: blur(10px);
+            }
+          }
+        }
       }
     }
   }

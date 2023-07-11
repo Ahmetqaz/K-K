@@ -913,11 +913,12 @@
     @include transition;
     opacity: 0;
     &__shape {
-      opacity: 1;
+      opacity: 0.4;
       width: 300px;
       height: 300px;
+      filter: blur(100px);
       &._pink {
-        right: -300px;
+        right: -200px;
         top: unset;
         bottom: -150px;
         background: linear-gradient(243deg, #66eba9, #6381fd, #ce4fba, #fa5561);
@@ -925,14 +926,47 @@
       &._yellow {
         top: unset;
         right: unset;
-        left: -300px;
+        left: -200px;
         bottom: -150px;
-        background: linear-gradient(54deg, #66eba9 0%, #fa5561 100%);
+        background: linear-gradient(126deg, #66eba9 0%, #fa5561 100%);
       }
     }
   }
 }
+.wrapper {
+  position: relative;
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 654px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(15px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
 
+@mixin components-1280 {
+  .list {
+    font-size: 16px;
+  }
+}
 @mixin components-1160 {
   .button {
     &--primary {
@@ -956,6 +990,9 @@
   .logo {
     font-size: 30px;
   }
+  .list {
+    font-size: 14px;
+  }
 }
 @mixin components-840 {
   .button {
@@ -976,7 +1013,6 @@
   }
 }
 @mixin components-768 {
-
   .logo {
     font-size: 26px;
   }
@@ -999,6 +1035,30 @@
       height: 350px;
     }
   }
+  .list {
+    .bubles {
+      @include transition;
+      // opacity: 0;
+      &__shape {
+        opacity: 1;
+        width: 150px;
+        height: 150px;
+        filter: blur(50px);
+        opacity: 0.3;
+        &._pink {
+          right: -70px;
+          top: unset;
+          bottom: -50px;
+        }
+        &._yellow {
+          top: unset;
+          right: unset;
+          left: -50px;
+          bottom: -50px;
+        }
+      }
+    }
+  }
 }
 @mixin components-390 {
   .button {
@@ -1012,10 +1072,13 @@
     &._extra {
       font-size: 10px;
       min-width: 92px;
-      padding: 1.3em 1.2em
+      padding: 1.3em 1.2em;
     }
   }
   .logo {
     font-size: 22px;
+  }
+  .list {
+    font-size: 12px;
   }
 }

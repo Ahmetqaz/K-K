@@ -1349,12 +1349,14 @@ svg {
   opacity: 0;
 }
 .list .bubles__shape {
-  opacity: 1;
+  opacity: 0.4;
   width: 300px;
   height: 300px;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
 }
 .list .bubles__shape._pink {
-  right: -300px;
+  right: -200px;
   top: unset;
   bottom: -150px;
   background: linear-gradient(243deg, #66eba9, #6381fd, #ce4fba, #fa5561);
@@ -1362,9 +1364,41 @@ svg {
 .list .bubles__shape._yellow {
   top: unset;
   right: unset;
-  left: -300px;
+  left: -200px;
   bottom: -150px;
-  background: linear-gradient(54deg, #66eba9 0%, #fa5561 100%);
+  background: linear-gradient(126deg, #66eba9 0%, #fa5561 100%);
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper__bg {
+  position: absolute;
+  width: 100%;
+  height: 654px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: -3;
+}
+.wrapper__bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.74);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+}
+.wrapper__bg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: -1;
 }
 
 .footer {
@@ -1719,7 +1753,7 @@ svg {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -2;
   pointer-events: none;
 }
 .hero__bg-image {
@@ -2084,6 +2118,9 @@ svg {
   border-radius: 0 98px 35px 0;
   overflow: hidden;
 }
+.benefitsImage._lg .ratioImage img:nth-child(2) {
+  display: none;
+}
 .benefitsImage._sm {
   position: absolute;
   top: -36px;
@@ -2103,6 +2140,9 @@ svg {
   z-index: -1;
   -webkit-filter: blur(33px);
           filter: blur(33px);
+}
+.benefitsImage._sm .ratioImage img:nth-child(3) {
+  display: none;
 }
 .benefitsImage._extra-sm {
   position: absolute;
@@ -2125,41 +2165,12 @@ svg {
   -webkit-filter: blur(33px);
           filter: blur(33px);
 }
+.benefitsImage._extra-sm img:nth-child(3) {
+  display: none;
+}
 .benefits .autoContainer {
   padding: 0 60px 0 0;
   max-width: 1440px;
-}
-
-.wrapper {
-  position: relative;
-}
-.wrapper__bg {
-  position: absolute;
-  width: 100%;
-  height: 654px;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  z-index: -1;
-}
-.wrapper__bg:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.74);
-  -webkit-backdrop-filter: blur(15px);
-          backdrop-filter: blur(15px);
-}
-.wrapper__bg img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  z-index: -1;
 }
 
 .price {
@@ -2265,8 +2276,15 @@ svg {
     font-size: 90px;
   }
 
+  h4._extra-lg {
+    font-size: 45px;
+  }
   h4._lg {
     font-size: 42px;
+  }
+
+  .list {
+    font-size: 16px;
   }
 
   .about__inner .video {
@@ -2288,6 +2306,9 @@ svg {
     padding: 0 40px;
   }
 
+  h4._extra-lg {
+    font-size: 40px;
+  }
   h4._lg {
     font-size: 38px;
   }
@@ -2312,6 +2333,16 @@ svg {
   .achievement {
     padding: 70px 0;
   }
+
+  .benefits {
+    padding: 80px 0;
+  }
+  .benefits__inner-content {
+    gap: 30px;
+  }
+  .benefits .autoContainer {
+    padding-right: 40px;
+  }
 }
 @media (max-width: 1025px) {
   .autoContainer {
@@ -2325,6 +2356,9 @@ svg {
     font-size: 1.2em;
   }
 
+  h4._extra-lg {
+    font-size: 35px;
+  }
   h4._lg {
     font-size: 35px;
   }
@@ -2350,6 +2384,10 @@ svg {
 
   .logo {
     font-size: 30px;
+  }
+
+  .list {
+    font-size: 14px;
   }
 
   .header {
@@ -2500,6 +2538,16 @@ svg {
     width: 45px;
     height: 45px;
   }
+
+  .benefits {
+    padding: 80px 0;
+  }
+  .benefits__inner-content {
+    gap: 20px;
+  }
+  .benefits .autoContainer {
+    padding-right: 30px;
+  }
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -2510,6 +2558,9 @@ svg {
     font-size: 70px;
   }
 
+  h4._extra-lg {
+    font-size: 32px;
+  }
   h4._lg {
     font-size: 32px;
   }
@@ -2565,6 +2616,10 @@ svg {
   }
 
   .achievement {
+    padding: 60px 0;
+  }
+
+  .benefits {
     padding: 60px 0;
   }
 }
@@ -2643,6 +2698,9 @@ svg {
   .about__inner-box {
     gap: 15px;
   }
+  .about__inner-box p {
+    max-width: unset;
+  }
   .about__inner-image {
     width: 100%;
     width: calc(100% + 30px);
@@ -2684,6 +2742,51 @@ svg {
   .achievementItem h4._lg {
     font-size: 28px;
   }
+
+  .benefits__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 70px;
+  }
+  .benefits__inner-images {
+    width: calc(100% + 30px);
+    margin-left: -30px;
+  }
+  .benefits__inner-content {
+    width: 100%;
+    max-width: unset;
+  }
+  .benefitsImage._lg .ratioImage img {
+    display: none;
+  }
+  .benefitsImage._lg .ratioImage img:nth-child(2) {
+    display: block;
+  }
+  .benefitsImage._sm .ratioImage img:nth-child(1) {
+    display: none;
+  }
+  .benefitsImage._sm .ratioImage img:nth-child(2) {
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+  .benefitsImage._sm .ratioImage img:nth-child(3) {
+    display: block;
+  }
+  .benefitsImage._extra-sm .ratioImage img:nth-child(1) {
+    display: none;
+  }
+  .benefitsImage._extra-sm .ratioImage img:nth-child(2) {
+    -webkit-filter: blur(20px);
+            filter: blur(20px);
+  }
+  .benefitsImage._extra-sm .ratioImage img:nth-child(3) {
+    display: block;
+  }
+  .benefits .autoContainer {
+    padding: 0 30px;
+  }
 }
 @media (max-width: 768px) {
   h1 {
@@ -2698,6 +2801,10 @@ svg {
   }
 
   h5._extra-sm {
+    font-size: 12px;
+  }
+
+  h6._lg {
     font-size: 12px;
   }
 
@@ -2747,6 +2854,31 @@ svg {
             filter: blur(200px);
     width: 350px;
     height: 350px;
+  }
+
+  .list .bubles {
+    -webkit-transition: all 0.2s ease-in-out 0s;
+    transition: all 0.2s ease-in-out 0s;
+    -moz-transition: all 0.2s ease-in-out 0s;
+  }
+  .list .bubles__shape {
+    opacity: 1;
+    width: 150px;
+    height: 150px;
+    -webkit-filter: blur(50px);
+            filter: blur(50px);
+    opacity: 0.3;
+  }
+  .list .bubles__shape._pink {
+    right: -70px;
+    top: unset;
+    bottom: -50px;
+  }
+  .list .bubles__shape._yellow {
+    top: unset;
+    right: unset;
+    left: -50px;
+    bottom: -50px;
   }
 
   .hero {
@@ -2823,6 +2955,10 @@ svg {
     left: -300px;
     bottom: unset;
   }
+
+  .benefits {
+    padding: 80px 0 50px;
+  }
 }
 @media (max-width: 550px) {
   .header .logo .text {
@@ -2851,6 +2987,7 @@ svg {
   }
   .about__inner-image .ratioImage {
     border-radius: 48px 0 0 17px;
+    padding-bottom: 64%;
   }
   .about__inner-image-parts {
     width: 62px;
@@ -2860,6 +2997,34 @@ svg {
   .achievementItem__image {
     width: 30px;
     height: 30px;
+  }
+
+  .benefitsImage._lg .ratioImage {
+    padding-bottom: 72%;
+    border-radius: 0 54px 19px 0;
+  }
+  .benefitsImage._sm {
+    width: 39%;
+    top: -20px;
+    left: -35px;
+  }
+  .benefitsImage._sm .ratioImage {
+    border-radius: 12px;
+  }
+  .benefitsImage._sm .ratioImage img:nth-child(2) {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
+  }
+  .benefitsImage._extra-sm {
+    bottom: -16px;
+    right: 30px;
+  }
+  .benefitsImage._extra-sm .ratioImage {
+    border-radius: 12px;
+  }
+  .benefitsImage._extra-sm .ratioImage img:nth-child(2) {
+    -webkit-filter: blur(10px);
+            filter: blur(10px);
   }
 }
 @media (max-width: 390px) {
@@ -2876,6 +3041,10 @@ svg {
   }
 
   h5._extra-sm {
+    font-size: 10px;
+  }
+
+  h6._lg {
     font-size: 10px;
   }
 
@@ -2896,6 +3065,10 @@ svg {
 
   .logo {
     font-size: 22px;
+  }
+
+  .list {
+    font-size: 12px;
   }
 
   .hero {

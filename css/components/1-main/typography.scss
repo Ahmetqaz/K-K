@@ -106,6 +106,9 @@ p {
     font-size: 90px;
   }
   h4 {
+    &._extra-lg {
+      font-size: 45px;
+    }
     &._lg {
       font-size: 42px;
     }
@@ -113,6 +116,9 @@ p {
 }
 @mixin typography-1160 {
   h4 {
+    &._extra-lg {
+      font-size: 40px;
+    }
     &._lg {
       font-size: 38px;
     }
@@ -129,6 +135,9 @@ p {
     }
   }
   h4 {
+    &._extra-lg {
+      font-size: 35px;
+    }
     &._lg {
       font-size: 35px;
     }
@@ -150,6 +159,9 @@ p {
     font-size: 70px;
   }
   h4 {
+    &._extra-lg {
+      font-size: 32px;
+    }
     &._lg {
       font-size: 32px;
     }
@@ -180,6 +192,11 @@ p {
       font-size: 12px;
     }
   }
+  h6 {
+    &._lg {
+      font-size: 12px;
+    }
+  }
 }
 @mixin typography-390 {
   h1 {
@@ -196,6 +213,11 @@ p {
   }
   h5 {
     &._extra-sm {
+      font-size: 10px;
+    }
+  }
+  h6 {
+    &._lg {
       font-size: 10px;
     }
   }
