@@ -1,10 +1,25 @@
 .hero {
   position: relative;
-  padding: 244px 0 32px;
+  padding: 100px 0 32px;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 990px;
   &__inner {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
     gap: 80px;
+    padding-left: 80px;
+    &-group {
+      display: flex;
+      align-items: center;
+      gap: 60px;
+      h6 {
+        color: $white-2;
+        font-weight: 400;
+      }
+    }
     &-content {
       display: flex;
       flex-direction: column;
@@ -20,11 +35,11 @@
         max-width: 400px;
       }
     }
-    &-tabs {
+    &-footer {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      gap: 60px;
+      gap: 80px;
     }
     .video {
       position: absolute;
@@ -78,6 +93,9 @@
   }
   h1 {
     line-height: 1em;
+  }
+  .autoContainer {
+    height: 100%;
   }
 }
 .sponsors {
@@ -159,7 +177,7 @@
       margin: -30px -90px 0 0;
       position: relative;
       .ratioImage {
-        border-radius: 98px 0 0 35px;
+        border-radius: 98px 30px 30px 35px;
         overflow: hidden;
         padding-bottom: 58%;
         width: 100%;
@@ -331,7 +349,7 @@
   &Image {
     &._lg {
       .ratioImage {
-        border-radius: 0 98px 35px 0;
+        border-radius: 30px 98px 35px 30px;
         overflow: hidden;
         img {
           &:nth-child(2) {
@@ -499,6 +517,11 @@
       }
     }
   }
+  .hero {
+    &__inner {
+      padding-left: 60px;
+    }
+  }
 }
 @mixin index-1160 {
   .sponsors {
@@ -527,6 +550,9 @@
 }
 @mixin index-1025 {
   .hero {
+    &__inner {
+      padding-left: 40px;
+    }
     .video {
       width: 240px;
       &__box {
@@ -852,7 +878,7 @@
         .ratioImage {
           padding-bottom: 100%;
         }
-        .bubles{
+        .bubles {
           display: none;
         }
       }
@@ -861,7 +887,6 @@
         }
       }
     }
-   
   }
 }
 @mixin index-768 {
@@ -1018,6 +1043,15 @@
 }
 @mixin index-550 {
   .hero {
+    &__inner {
+      padding-left: 0;
+      &-footer {
+        gap: 40px;
+      }
+      &-group {
+        gap: 30px;
+      }
+    }
     &__bg {
       &-image {
         &._sm {
@@ -1123,7 +1157,7 @@
           gap: 10px;
         }
       }
-      &-wrapper{
+      &-wrapper {
         gap: 10px;
         flex-wrap: wrap;
       }

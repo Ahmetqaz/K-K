@@ -16,10 +16,13 @@ h1 {
   font-size: 104px;
   text-transform: uppercase;
   word-break: break-word;
+  letter-spacing: -4px;
   ._lg {
     font-size: 1.36em;
     text-transform: lowercase;
     font-style: italic;
+    margin-top: -0.085em;
+    display: block;
   }
 }
 h2 {
@@ -206,6 +209,7 @@ p {
   h1 {
     ._lg {
       font-weight: 500;
+      margin-top: unset;
     }
   }
   p {
@@ -223,7 +227,6 @@ p {
     &._extra-sm {
       font-size: 10px;
     }
-   
   }
   h6 {
     &._lg {

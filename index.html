@@ -17,13 +17,16 @@
     <header class="header" id="header">
       <div class="autoContainer">
         <div class="header__inner">
-          <div class="logo">
-            <div class="logo__image">
-              <img src="./images/logo.png" alt="">
+          <div class="header__inner-group">
+            <div class="burger" id="menuBtn"></div>
+            <div class="logo">
+              <div class="logo__image">
+                <img src="./images/logo.png" alt="">
+              </div>
+              <span class="text text--gradient">
+                K&K Digital Media
+              </span>
             </div>
-            <span class="text text--gradient">
-              K&K Digital Media
-            </span>
           </div>
           <button class="button button--primary">
             <span>
@@ -33,12 +36,32 @@
         </div>
       </div>
     </header>
-    <!-- #header end -->
 
+    <!-- #sidebar start -->
+    <nav class="sidebar" id="menu">
+      <div class="sidebar__inner">
+        <a href="#" class="sidebar__inner-link">
+          Home
+        </a>
+        <a href="#" class="sidebar__inner-link">
+          About
+        </a>
+        <a href="#" class="sidebar__inner-link">
+          Service
+        </a>
+        <a href="#" class="sidebar__inner-link">
+          Faq
+        </a>
+      </div>
+    </nav>
+    <!-- #sidebar end -->
+
+    <!-- #header end -->
     <!-- #hero start -->
     <section class="hero">
       <div class="autoContainer">
         <div class="hero__inner">
+          <div class="empty"></div>
           <div class="hero__inner-content">
             <div class="hero__inner-box">
               <h1>
@@ -107,15 +130,17 @@
               </div>
             </div>
           </div>
-          <div class="hero__inner-tabs">
-            <button class="button button--text">
-              2023
-            </button>
-            <button class="button button--text">
-              K&K Digital Media
-            </button>
+          <div class="hero__inner-footer">
+            <div class="hero__inner-group">
+              <h6 class="_lg">
+                2023
+              </h6>
+              <h6 class="_lg">
+                K&K Digital Media
+              </h6>
+            </div>
             <button class="button button--text active">
-              Explore ALl
+              Explore ALL
             </button>
           </div>
         </div>
@@ -258,7 +283,6 @@
           </div>
         </div>
       </div>
-
     </section>
     <!-- #about end-->
 
@@ -467,7 +491,7 @@
     <!-- #wrapper about benefits end-->
 
     <!-- #price start-->
-    <section class="price" >
+    <section class="price">
       <div class="autoContainer">
         <div class="price__inner">
           <div class="price__inner-content">
@@ -560,7 +584,7 @@
     <!-- #price end-->
 
     <!-- #about start-->
-    <section class="about" >
+    <section class="about">
       <div class="autoContainer">
         <div class="about__inner">
           <div class="video">
