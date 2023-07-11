@@ -14,7 +14,7 @@ menuBtn.onclick = function () {
   body.classList.toggle("active");
 };
 window.onclick = function (event) {
-  if (event.target == menu) {
+  if (event.target == menu ) {
     closeMenu();
   }
 };

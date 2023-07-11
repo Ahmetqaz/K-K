@@ -352,7 +352,7 @@
     }
   }
 }
-@mixin header-550 {
+@mixin header-668 {
   .header {
     &__inner {
       padding-left: 0;
@@ -365,6 +365,10 @@
         height: 10px;
       }
     }
+  }
+}
+@mixin header-550 {
+  .header {
     .logo {
       .text {
         display: none;

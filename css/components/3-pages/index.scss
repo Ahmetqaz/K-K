@@ -1,16 +1,15 @@
 .hero {
   position: relative;
-  padding: 100px 0 32px;
   height: 100vh;
   height: 100dvh;
-  min-height: 990px;
+  min-height: 950px;
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    gap: 80px;
-    padding-left: 80px;
+    gap: 50px;
+    padding: 140px 0 32px 80px;
     &-group {
       display: flex;
       align-items: center;
@@ -26,6 +25,7 @@
       align-items: flex-start;
       gap: 46px;
       position: relative;
+      margin: auto 0 0 0;
     }
     &-box {
       display: flex;
@@ -518,8 +518,9 @@
     }
   }
   .hero {
+    min-height: 850px;
     &__inner {
-      padding-left: 60px;
+      padding: 140px 0 32px 60px;
     }
   }
 }
@@ -551,7 +552,7 @@
 @mixin index-1025 {
   .hero {
     &__inner {
-      padding-left: 40px;
+      padding: 120px 0 32px 45px;
     }
     .video {
       width: 240px;
@@ -625,9 +626,9 @@
 }
 @mixin index-940 {
   .hero {
-    padding-top: 200px;
+    min-height: 750px;
     &__inner {
-      gap: 70px;
+      padding: 100px 0 32px 45px;
     }
     .video {
       width: 220px;
@@ -708,9 +709,8 @@
 }
 @mixin index-840 {
   .hero {
-    padding-top: 170px;
+    min-height: 700px;
     &__inner {
-      gap: 60px;
     }
     .video {
       width: 200px;
@@ -891,7 +891,7 @@
 }
 @mixin index-768 {
   .hero {
-    padding-top: 150px;
+    min-height: 600px;
     &__inner {
       gap: 40px;
     }
@@ -925,8 +925,8 @@
 }
 @mixin index-668 {
   .hero {
-    padding-top: 135px;
     &__inner {
+      padding-left: 0;
       &-tabs {
         display: none;
       }
@@ -1044,7 +1044,6 @@
 @mixin index-550 {
   .hero {
     &__inner {
-      padding-left: 0;
       &-footer {
         gap: 40px;
       }
@@ -1166,7 +1165,6 @@
 }
 @mixin index-390 {
   .hero {
-    padding-top: 120px;
   }
   .achievement {
     &Item {
