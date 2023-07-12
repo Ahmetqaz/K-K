@@ -1,14 +1,84 @@
 .dashboard {
   &__inner {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    height: 100vh;
+    min-height: 970px;
+    padding: 38px 0 34px;
+    &-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+    }
+    &-graph {
+      padding: 20px 24px;
+      background: $black-8;
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        img {
+          width: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+    &-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &-body {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+      }
+      h5 {
+        font-weight: 600;
+      }
+      h6 {
+        font-weight: 600;
+        padding-left: 20px;
+        position: relative;
+        &:nth-child(2) {
+          &::before {
+            background-color: #fa5561;
+          }
+        }
+        &::before {
+          content: "";
+          width: 12px;
+          height: 12px;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          background-color: #66eba9;
+          border-radius: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &-container {
+      display: flex;
+      flex-direction: column;
+      gap: 26px;
+    }
   }
   &Header {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 18px;
     &__box {
       display: flex;
       flex-direction: column;
       gap: 5px;
+      width: calc(40% - 10px);
       h4 {
         font-weight: 500;
       }
@@ -17,9 +87,144 @@
         color: $white-2;
       }
     }
-    
+    &__group {
+      display: flex;
+      justify-content: flex-end;
+      width: calc(60% - 10px);
+      gap: 20px;
+      .input {
+        max-width: 376px;
+        input {
+          padding: 1.3em 1.6em 1.3em 3.6em;
+          border-color: rgba($black, 0.6);
+          background: rgba($black-4, 0.4);
+          &:focus {
+            border-color: rgba($white, 0.2);
+          }
+        }
+        .ico {
+          right: unset;
+          left: 16px;
+        }
+      }
+      &-body {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      &-avatar {
+        min-width: 48px;
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        overflow: hidden;
+        position: relative;
+        border: 1px solid $black;
+        &::after {
+          content: "";
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+          background: $green-2;
+          position: absolute;
+          top: 2px;
+          right: 0;
+          border: 1px solid $black;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      h5 {
+        font-weight: 400;
+        white-space: nowrap;
+      }
+    }
+  }
+  &Info {
+    width: calc(33% - 10px);
+    max-width: 360px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 1em;
+    &__item {
+      padding: 1.15em 1.35em;
+      background-color: rgba($black-4, 0.8);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      gap: 22px;
+      &-body {
+        width: 2.5em;
+        height: 2.5em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 3px;
+        background: rgba(255, 246, 39, 1);
+      }
+      &-image {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1.2em;
+        height: 1.2me;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+      &-box {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h6 {
+          font-weight: 500;
+          color: $white-5;
+        }
+        h5 {
+          font-weight: 600;
+        }
+      }
+    }
+    &__image {
+      width: 100%;
+      max-width: 272px;
+      height: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+    &._chart {
+      padding: 1.4em 2em;
+      background-color: rgba($black-4, 0.8);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    &._lg {
+      .dashboard {
+        &Info {
+          &__item {
+            height: calc(50% - 10px);
+          }
+        }
+      }
+    }
   }
   .autoContainer {
     padding: 0 30px;
+    max-width: 1112px;
   }
 }

@@ -41,8 +41,7 @@
   width: 100%;
   font-size: 12px;
   input,
-  textarea,
-  &__selected {
+  textarea {
     padding: 1.4em 1.6em;
     border-radius: 0.85em;
     width: 100%;
@@ -58,13 +57,12 @@
     font-weight: 400;
     font-size: inherit;
     line-height: 1;
-    backdrop-filter: blur(25px);
     &::placeholder {
       color: rgba($white-3, 0.4);
     }
     &:focus {
       border-color: rgba($blue, 0.3);
-      backdrop-filter: unset;
+      background-color: rgba($black-4, 0.5);
     }
   }
   &__group {
@@ -111,7 +109,84 @@
       }
     }
   }
+  &--select {
+    position: relative;
+    &.active {
+      .input {
+        &__selected {
+          border-radius: 3px 3px 0 0;
+          &:after {
+            transform: rotate(180deg);
+          }
+        }
+        &__dropdown {
+          max-height: 500px;
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+  &__selected {
+    padding: 1em 2.8em 1em 1.6em;
+    border: 1px solid $black-7;
+    color: $white;
+    font-size: 1em;
+    position: relative;
+    border-radius: 4px;
+    background: $black-8;
+    @include transition;
+    line-height: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    min-width: 136px;
+    text-align: center;
+    &::after {
+      content: "";
+      width: 12px;
+      height: 12px;
+      position: absolute;
+      top: 12px;
+      right: 20px;
+      background-image: url("../images/dashboard/table/arrow-down.svg");
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      @include transition;
+    }
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+  &__dropdown {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background: $black-8;
+    border: 1px solid $black-7;
+    padding: 1em 1.6em 1em 1.6em;
+    border-top: unset;
+    border-radius: 0 0 3px 3px;
+    @include transition;
+    max-height: 0;
+    pointer-events: none;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &-item {
+      font-size: 1em;
+      line-height: 1em;
+      font-weight: 500;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+  }
 }
+
 .button {
   cursor: pointer;
   display: flex;
@@ -240,8 +315,22 @@
       background: rgba($black-6, 0.2);
     }
   }
-  &--ico{
-    
+  &--ico {
+    background-color: $black-4;
+    border: 1px solid $black;
+    border-radius: 15px;
+    padding: 0.8em;
+    .ico {
+      width: 1.7em;
+      height: 1.7em;
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      border-color: rgba($white, 0.2);
+      .ico {
+        opacity: 0.7;
+      }
+    }
   }
   &:active {
     opacity: 0.7;
