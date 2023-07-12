@@ -1,6 +1,7 @@
 @import "./animate.css";
 // 0-addons
 @import "./components/0-plugins/animations.scss";
+@import "./components/0-plugins/font-icon.scss";
 // @import "./components/0-plugins/slick.scss";
 // 1-main components
 @import "./components/1-main/variables.scss";
@@ -13,6 +14,7 @@
 @import "./components/2-layout/header.scss";
 @import "./components/2-layout/nav.scss";
 @import "./components/2-layout/login.scss";
+@import "./components/2-layout/dashboard.scss";
 // 3-pages components
 @import "./components/3-pages/index.scss";
 

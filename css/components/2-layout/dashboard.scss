@@ -1,0 +1,25 @@
+.dashboard {
+  &__inner {
+  }
+  &Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__box {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      h4 {
+        font-weight: 500;
+      }
+      h5 {
+        font-weight: 400;
+        color: $white-2;
+      }
+    }
+    
+  }
+  .autoContainer {
+    padding: 0 30px;
+  }
+}
