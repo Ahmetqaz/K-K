@@ -315,7 +315,11 @@
                 </div>
               </div>
               <div class="video__box">
-                <div class="video__box-button">
+                <button
+                  class="video__box-button"
+                  data-event="modal"
+                  data-modal="video-1"
+                >
                   <span class="blurredPolygon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -339,7 +343,7 @@
                       />
                     </svg>
                   </span>
-                </div>
+                </button>
               </div>
               <div class="bubles">
                 <div class="bubles__shape _yellow"></div>
@@ -471,7 +475,7 @@
         <!-- #about end-->
 
         <!-- #benefits start-->
-        <section class="benefits">
+        <section class="benefits" id="pin">
           <div class="autoContainer">
             <div class="benefits__inner">
               <div class="benefits__inner-images">
@@ -509,14 +513,14 @@
                   </h4>
                 </div>
                 <ul class="list">
-                  <li class="list__item">
+                  <li class="list__item" data-event="scroll-toggle">
                     ⭐ Respond in detail to WA needs and goals
                     <div class="bubles">
                       <div class="bubles__shape _pink"></div>
                       <div class="bubles__shape _yellow"></div>
                     </div>
                   </li>
-                  <li class="list__item">
+                  <li class="list__item" data-event="scroll-toggle">
                     ⭐ Marketing Companies and local businesses can bring their
                     content live fast, easily and cost-efficient
                     <div class="bubles">
@@ -524,7 +528,7 @@
                       <div class="bubles__shape _yellow"></div>
                     </div>
                   </li>
-                  <li class="list__item">
+                  <li class="list__item" data-event="scroll-toggle">
                     ⭐ Influencers / Content Creators offering entertainment can
                     increase their reach – partner program available
                     <div class="bubles">
@@ -634,7 +638,11 @@
                 </div>
               </div>
               <div class="video__box">
-                <div class="video__box-button">
+                <button
+                  class="video__box-button"
+                  data-event="modal"
+                  data-modal="video-2"
+                >
                   <span class="blurredPolygon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -658,7 +666,7 @@
                       />
                     </svg>
                   </span>
-                </div>
+                </button>
               </div>
             </div>
             <div class="about__inner-content">
@@ -742,6 +750,42 @@
       <!-- #footer end -->
     </div>
 
+    <div class="modal" id="video-1">
+      <div class="video">
+        <div class="video__content">
+          <iframe
+            width="420"
+            height="315"
+            allow="autoplay"
+            src="https://www.youtube.com/embed/YAWt-gktZqM?autoplay=1"
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="video-2">
+      <div class="video">
+        <div class="video__content">
+          <iframe
+            width="420"
+            height="315"
+            allow="autoplay"
+            src="https://www.youtube.com/embed/YAWt-gktZqM?autoplay=1"
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/scrollMagic.min.js"></script>
+    <script src="js/TweenMax.js"></script>
+    <script src="js/animate.gsap.min.js"></script>
+    <script src="js/swiper.js"></script>
+    <script src="js/scroll-effects.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
     <script src="js/main.js"></script>
