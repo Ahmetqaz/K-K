@@ -1,168 +1,75 @@
 .input {
   display: flex;
   width: 100%;
-  font-size: 20px;
-
+  font-size: 12px;
   input,
   textarea,
   &__selected {
-    padding: 1.2em 1.9em;
-    border-radius: 2em;
+    padding: 1.4em 1.6em;
+    border-radius: 0.85em;
     width: 100%;
-    background-color: $white;
-    border: 2px solid $white;
+    background-color: rgba($black-4, 0.7);
+    border: 1px solid $black-5;
     resize: none;
     transition: 0.3s ease-out;
 
     //font
-    color: $black;
+    color: $white-3;
     font-family: $font-primary;
     font-style: normal;
-    font-weight: 500;
+    font-weight: 400;
     font-size: inherit;
     line-height: 1;
+    backdrop-filter: blur(25px);
     &::placeholder {
-      color: rgba($black, 0.4);
+      color: rgba($white-3, 0.4);
+    }
+    &:focus {
+      border-color: rgba($blue, 0.3);
+      backdrop-filter: unset;
     }
   }
-  input:focus,
-  textarea:focus {
-    border-color: rgba($black, 0.8);
-  }
-  &--primary {
-    input {
-      background: $white;
-      border-color: rgba($black, 0.06);
-      box-shadow: 0px 1em 1.3em rgba($black, 0.22);
-      border-radius: 25;
-      &:focus {
-      }
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 14px;
+    label {
+      font-size: 1em;
+      font-weight: 500;
+      color: $white;
+      line-height: 1;
     }
   }
-  &--underline {
-    input,
-    textarea,
-    &__selected {
-      padding: 1em 0.2em;
-      border-radius: 0;
-      border: 0;
-      border-bottom: 1px solid $white;
-    }
-  }
-  &--select {
-    position: relative;
-    min-width: 130px;
-    .input {
-      &__selected {
-        cursor: pointer;
-        transition-delay: 0.25s;
-
-        &:hover {
-          opacity: 0.8;
-          border-color: rgba($black, 0.8);
-        }
-
-        &:after {
-          color: inherit;
-          content: "";
-          position: absolute;
-          display: block;
-          top: 50%;
-          right: 1.2em;
-          width: 0;
-          height: 0;
-          border-bottom: 6px solid currentColor;
-          border-right: 6px solid transparent;
-          border-left: 6px solid transparent;
-          transform: translateY(-50%) rotate(180deg);
-          transition: 0.3s ease;
-        }
-      }
-      &__dropdown {
-        position: absolute;
-        top: calc(100% - 3px);
-        width: 100%;
-        max-height: 0;
-        opacity: 0;
-        overflow: hidden;
-        background-color: $white;
-        border: 2px solid transparent;
-        color: $black;
-        box-sizing: border-box;
-        border: 2px solid transparent;
-        border-radius: 0 0 2em 2em;
-        border-top: unset;
-        transition: max-height 0.3s ease, border-color 0s ease 0.3s,
-          opacity 0.1s ease 0.2s;
-        @include hideScroll;
-
-        z-index: 1;
-
-        &-item {
-          cursor: pointer;
-          padding: 0.4em 1em;
-          border-top: 1px solid rgba($black, 0.1);
-          transition: 0.3s ease-out;
-
-          &:hover {
-            background: $white;
-          }
-          &:first-child {
-            border-top: unset;
-          }
-          strong {
-            color: $black;
-            font-weight: 500;
-            pointer-events: none;
-          }
-          p {
-            pointer-events: none;
-          }
-        }
-      }
-    }
-
-    &.active .input {
-      &__selected {
-        color: $black;
-        border-radius: 2em 2em 0 0;
-        border-bottom: 1px solid rgba($black, 0.1);
-        border-color: $black;
-        transition-duration: 0.1s;
-        transition-delay: 0s;
-        &:after {
-          transform: translateY(-50%);
-        }
-      }
-      &__dropdown {
-        top: 100%;
-        max-height: 30vh;
-        overflow-y: auto;
-        border-color: $black;
-        opacity: 1;
-        padding: 0.5em 0 1em 0;
-        transition: max-height 0.4s ease, opacity 0.2s ease;
-      }
-    }
-  }
-  &--buttonRight {
+  &--ico {
     position: relative;
     input {
-      padding-right: 3em;
+      padding: 1.4em 4em 1.4em 1.6em;
     }
-    .button {
+    .ico {
+      width: 1.42em;
+      height: 1.42em;
+      color: $white;
       position: absolute;
-      font-size: inherit;
       top: 50%;
-      right: 0.5em;
       transform: translateY(-50%);
-    }
-    &._wideButton {
-      input {
-        padding-right: 8em;
+      right: 20px;
+      cursor: pointer;
+      svg {
+        width: 100%;
+        height: 100%;
+        stroke: transparent;
+        fill: currentColor;
+        @include transition;
       }
-      .button {
-        width: 7em;
+      &:hover {
+        color: $gray-2;
+      }
+    }
+    &._stroke {
+      svg {
+        stroke: currentColor;
+        fill: transparent;
       }
     }
   }
@@ -268,6 +175,33 @@
       background: rgba($white, 0.05);
     }
   }
+  &--social {
+    gap: 10px;
+    font-weight: 500;
+    padding: 1.15em 1.4em;
+    border-color: $black-6;
+    border-radius: 0.85em;
+    .ico {
+      width: 1.14em;
+      height: 1.14em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: currentColor;
+      }
+    }
+    &:hover {
+      background: rgba($black-6, 0.2);
+    }
+  }
   &:active {
     opacity: 0.7;
   }
@@ -280,7 +214,6 @@
   position: relative;
   padding-bottom: 65%;
   width: 100%;
-
   img {
     position: absolute;
     top: 0;

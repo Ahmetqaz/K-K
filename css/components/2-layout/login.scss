@@ -1,0 +1,214 @@
+.login {
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 50px 0;
+    gap: 30px;
+    height: 100dvh;
+    height: 100vh;
+    min-height: 840px;
+    max-width: 385px;
+    margin: 0 auto;
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+      h4 {
+        font-weight: 500;
+      }
+    }
+    &-box {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .button {
+        background: $black;
+        padding: 1.2em 1.5em;
+        min-width: 166px;
+        font-weight: 500;
+      }
+    }
+    &-devider {
+      position: relative;
+      &::before {
+        content: "";
+        width: calc(50% - 35px);
+        height: 1px;
+        background-color: $black-5;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+      &::after {
+        content: "";
+        width: calc(50% - 35px);
+        height: 1px;
+        background-color: $black-5;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+      }
+      h6 {
+        color: $white;
+        position: relative;
+        z-index: 2;
+        text-align: center;
+      }
+    }
+    &-text {
+      color: $gray-2;
+      text-align: center;
+      line-height: 1.5em;
+      a {
+        font-weight: 400 !important;
+      }
+    }
+  }
+  .logo {
+    flex-direction: column;
+    gap: 14px;
+    font-size: 22px;
+    &__image {
+      width: 4.1em;
+      height: 4.1em;
+    }
+  }
+  h6 {
+    font-weight: 400;
+    a {
+      color: $blue;
+      font-weight: 500;
+    }
+  }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background: rgba($black, 0.2);
+      backdrop-filter: blur(90px);
+      z-index: 2;
+    }
+    &-image {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      z-index: -2;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &-shape {
+      position: absolute;
+      max-width: 1068px;
+      left: -4%;
+      bottom: -20%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+  }
+}
+@mixin login-840 {
+  .login {
+    &__inner {
+      padding: 40px 0;
+      gap: 20px;
+      min-height: 700px;
+    }
+    &__bg {
+      &-shape {
+        left: -10%;
+        bottom: -15%;
+      }
+    }
+    .logo {
+      font-size: 19px;
+    }
+  }
+}
+@mixin login-460 {
+  .login {
+    &__inner {
+      min-height: 650px;
+      &-box {
+        .button {
+          min-width: 140px;
+        }
+      }
+    }
+    .input {
+      font-size: 10px;
+      &__group {
+        font-size: 12px;
+      }
+    }
+  }
+}
+@mixin login-390 {
+  .login {
+    &__inner {
+      padding: 30px 0;
+      min-height: 570px;
+      &-box {
+        .button {
+          min-width: 115px;
+        }
+      }
+      &-devider {
+        &::before {
+          width: calc(50% - 24px);
+        }
+        &::after {
+          width: calc(50% - 24px);
+        }
+      }
+    }
+    &__bg {
+      &-shape {
+        left: -10%;
+        bottom: -15%;
+      }
+    }
+    .logo {
+      font-size: 15px;
+    }
+    .input {
+      font-size: 8px;
+      &--ico {
+        .ico {
+          width: 1.5em;
+          height: 1.5em;
+          right: 10px;
+        }
+      }
+      &__group {
+        font-size: 10px;
+      }
+    }
+    &__bg {
+      &-shape {
+        left: -10%;
+        bottom: -5%;
+      }
+    }
+  }
+}
