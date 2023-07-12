@@ -528,5 +528,6 @@
   &__wrapper {
     overflow: auto;
     height: calc(100vh - 615px);
+    min-height: 220px;
   }
 }
