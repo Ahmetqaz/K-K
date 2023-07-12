@@ -1,0 +1,220 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+}
+.autoContainer {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
+.video {
+  position: relative;
+  width: 254px;
+  z-index: 0;
+  &__border {
+    position: absolute;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    top: -10px;
+    left: -10px;
+    z-index: 1;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &__content {
+    z-index: -1;
+    padding-bottom: 70%;
+
+    .ratioImage {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-bottom: unset !important;
+      height: 100% !important;
+    }
+    iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: rgba($black, 0.3);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &-button {
+      width: 80px;
+      height: 80px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+      cursor: pointer;
+      @include transition;
+      z-index: 2;
+      border-radius: 50%;
+      display: flex;
+
+      &:hover {
+        opacity: 0.7;
+      }
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+.wrapper {
+  position: relative;
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: 654px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(15px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
+}
+
+
+
+
+@keyframes modal-enter {
+  from {
+    opacity: 0;
+    transform: translateY(10%) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: unset;
+  }
+}
+
+@keyframes modal-wrapper-enter {
+  from {
+    background: transparent;
+    backdrop-filter: unset;
+  }
+  to {
+    background: rgba($black, 0.2);
+    backdrop-filter: blur(5px);
+  }
+}
+
+.modal {
+  position: relative;
+  background: $black-3;
+  margin: auto;
+  width: 95%;
+  max-width: 900px;
+  padding: 2.5rem 1rem 1rem 1rem;
+  box-shadow: 0 25px 20px -20px rgba($black, 0.6),
+    0 20px 35px rgba($primary, 0.1);
+  opacity: 1;
+
+  &.enter {
+    animation: 0.2s modal-enter ease-out 0.1s;
+    animation-fill-mode: both;
+  }
+  .video {
+    width: 100%;
+  }
+  &.exit {
+    animation: 0.2s modal-enter ease-out;
+    animation-fill-mode: both;
+    animation-direction: reverse;
+  }
+
+  &__wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background: rgba($black, 0.2);
+    backdrop-filter: blur(5px);
+    display: flex;
+
+    &.enter {
+      animation: 0.15s modal-wrapper-enter ease-out;
+      animation-fill-mode: both;
+    }
+
+    &.exit {
+      animation: 0.15s modal-wrapper-enter ease-out 0.2s;
+      animation-fill-mode: both;
+      animation-direction: reverse;
+    }
+  }
+  &-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 2rem;
+    height: 2rem;
+    color: rgba($white, 0.4);
+    transition: 0.2s ease-out;
+
+    &:after,
+    &:before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      left: 50%;
+      width: 2px;
+      height: 60%;
+      background: currentColor;
+    }
+
+    &:hover {
+      color: rgba($white, 1);
+    }
+
+    &:before {
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+    &:after {
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+}
