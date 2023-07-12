@@ -37,6 +37,7 @@
   @include components-840;
   @include header-840;
   @include index-840;
+  @include login-840;
 }
 @media (max-width: 768px) {
   @include typography-768;
@@ -57,10 +58,13 @@
 @media (max-width: 460px) {
   @include components-460;
   @include index-460;
+  @include login-460;
 }
 @media (max-width: 390px) {
   @include typography-390;
   @include components-390;
   @include index-390;
   @include footer-390;
+  @include login-390;
+
 }
