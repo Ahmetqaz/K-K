@@ -3064,6 +3064,7 @@ svg {
           align-items: center;
   text-align: center;
   gap: 20px;
+  cursor: pointer;
 }
 .dashboardService__item-image {
   position: relative;
@@ -3079,6 +3080,11 @@ svg {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .dashboardService__item-image img {
   width: 100%;
@@ -3101,12 +3107,27 @@ svg {
   transition: all 0.2s ease-in-out 0s;
   -moz-transition: all 0.2s ease-in-out 0s;
   pointer-events: none;
+  opacity: 0;
 }
 .dashboardService__item-bg img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.dashboardService__item:hover .dashboardService__item-image {
+  -webkit-filter: grayscale(70%);
+          filter: grayscale(70%);
+}
+.dashboardService__item:hover .dashboardService__item-bg {
+  opacity: 0.5;
+}
+.dashboardService__item.active .dashboardService__item-image {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+.dashboardService__item.active .dashboardService__item-bg {
+  opacity: 1;
 }
 .dashboardService__bg {
   position: absolute;

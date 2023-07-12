@@ -158,7 +158,7 @@
         }
       }
     }
-    &._sm{
+    &._sm {
       margin-bottom: 8px;
     }
   }
@@ -307,6 +307,7 @@
       align-items: center;
       text-align: center;
       gap: 20px;
+      cursor: pointer;
       &-image {
         position: relative;
         z-index: 2;
@@ -315,6 +316,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        filter: grayscale(1);
+        @include transition;
         img {
           width: 100%;
           height: 100%;
@@ -334,10 +337,39 @@
         height: 100%;
         @include transition;
         pointer-events: none;
+        opacity: 0;
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
+        }
+      }
+      &:hover {
+        .dashboard {
+          &Service {
+            &__item {
+              &-image {
+                filter: grayscale(70%);
+              }
+              &-bg {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+      &.active {
+        .dashboard {
+          &Service {
+            &__item {
+              &-image {
+                filter: grayscale(0);
+              }
+              &-bg {
+                opacity: 1;
+              }
+            }
+          }
         }
       }
     }
@@ -371,7 +403,7 @@
   .autoContainer {
     padding: 0 30px;
     max-width: 1172px;
-    &._lg{
+    &._lg {
       max-width: 1222px;
     }
   }
