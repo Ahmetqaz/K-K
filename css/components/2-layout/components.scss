@@ -6,6 +6,7 @@
   &__content {
     padding-left: 250px;
     position: relative;
+    height: 100%;
     &-bg {
       position: absolute;
       top: 0;
@@ -28,6 +29,9 @@
         width: 100%;
         height: 100%;
       }
+    }
+    &._admin {
+      padding-left: 368px;
     }
   }
 }
@@ -186,7 +190,6 @@
     }
   }
 }
-
 .button {
   cursor: pointer;
   display: flex;
@@ -925,7 +928,6 @@
     }
   }
 }
-
 .blurredPolygon {
   display: inline-block;
   position: relative;
