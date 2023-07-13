@@ -2222,7 +2222,7 @@ form {
   height: 100%;
 }
 .main__content-bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -2606,7 +2606,7 @@ form {
   font-weight: 500;
 }
 .login__bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -2641,7 +2641,7 @@ form {
   position: absolute;
   width: 1068px;
   left: -4%;
-  bottom: -20%;
+  bottom: -35%;
 }
 .login__bg-shape img {
   width: 100%;
