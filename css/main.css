@@ -2997,6 +2997,10 @@ svg {
 .dashboardInfo._lg .dashboardInfo__item {
   height: calc(50% - 10px);
 }
+.dashboardInfo._big {
+  width: calc(25% - 5px);
+  font-size: 18px;
+}
 .dashboardTable {
   background-color: #0e1013;
   border-radius: 27px;
@@ -3989,12 +3993,36 @@ svg {
     font-size: 42px;
   }
 
+  .main__content {
+    padding-left: 200px;
+  }
+  .main__content._sidebar {
+    padding-left: 300px;
+  }
+
   .list {
     font-size: 16px;
   }
 
   .header__inner {
     padding-left: 60px;
+  }
+
+  .sidebar {
+    width: 200px;
+  }
+  .sidebar .logo {
+    font-size: 16px;
+  }
+  .sidebar__inner-link {
+    font-size: 18px;
+  }
+  .sidebar._admin {
+    width: 190px;
+    left: 110px;
+  }
+  .sidebar._admin .sidebarLink {
+    font-size: 18px;
   }
 
   .about__inner .video {
@@ -4018,6 +4046,15 @@ svg {
 
   .hero__inner {
     padding: 120px 0 32px 60px;
+  }
+
+  .dashboard__inner-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dashboardInfo._big {
+    width: calc(50% - 10px);
+    max-width: unset;
   }
 }
 @media (max-width: 1160px) {
@@ -4075,6 +4112,13 @@ svg {
 
   .footer {
     padding-top: 80px;
+  }
+
+  .dashboard .autoContainer {
+    padding: 0 15px;
+  }
+  .dashboardInfo {
+    font-size: 18px;
   }
 }
 @media (max-width: 1025px) {

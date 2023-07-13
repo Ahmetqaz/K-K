@@ -959,6 +959,14 @@
 }
 
 @mixin components-1280 {
+  .main {
+    &__content {
+      padding-left: 200px;
+      &._sidebar {
+        padding-left: 300px;
+      }
+    }
+  }
   .list {
     font-size: 16px;
   }

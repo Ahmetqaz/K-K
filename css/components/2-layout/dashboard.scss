@@ -257,6 +257,10 @@
         }
       }
     }
+    &._big {
+      width: calc(25% - 5px);
+      font-size: 18px;
+    }
   }
   &Table {
     background-color: $black-10;
@@ -564,5 +568,30 @@
     overflow: auto;
     height: calc(100vh - 615px);
     min-height: 220px;
+  }
+}
+@mixin dashboard-1280 {
+  .dashboard {
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+      }
+    }
+    &Info {
+      &._big {
+        width: calc(50% - 10px);
+        max-width: unset;
+      }
+    }
+  }
+}
+@mixin dashboard-1160 {
+  .dashboard {
+    .autoContainer {
+      padding: 0 15px;
+    }
+    &Info {
+      font-size: 18px;
+    }
   }
 }
