@@ -193,83 +193,135 @@
 }
 
 .icon-clipboardtext:before {
-  content: "\e800";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-clipboardtick:before {
-  content: "\e801";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-devices:before {
-  content: "\e802";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-diagram:before {
-  content: "\e803";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-eye:before {
-  content: "\e804";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-home:before {
-  content: "\e805";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-profile2user:before {
-  content: "\e806";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-receiptitem:before {
-  content: "\e807";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-truckfast:before {
-  content: "\e808";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-car:before {
-  content: "\e809";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-cardano:before {
-  content: "\e80a";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-category2:before {
-  content: "\e80b";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-1:before {
-  content: "\e80c";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-4:before {
-  content: "\e80d";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-5:before {
-  content: "\e80e";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-3:before {
-  content: "\e80f";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-8:before {
-  content: "\e810";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-7:before {
-  content: "\e811";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-6:before {
-  content: "\e812";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-icon-2:before {
-  content: "\e813";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-arrow-right:before {
-  content: "\e814";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-arrow-left:before {
-  content: "\e815";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-printer:before {
-  content: "\e817";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-documenttext:before {
-  content: "\e818";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-copy:before {
-  content: "\e819";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 .icon-down-open:before {
-  content: "\e81f";
-} /* '' */
+  content: "";
+}
+
+/* '' */
 @font-face {
   font-family: "Satoshi-Bold";
   src: url("../font-text/fonts/Satoshi-Bold.woff2") format("woff2"), url("../font-text/fonts/Satoshi-Bold.woff") format("woff"), url("../font-text/fonts/Satoshi-Bold.ttf") format("truetype");
@@ -279,7 +331,7 @@
 }
 /* Typography */
 h1 {
-  font-size: 104px;
+  font-size: 10.3vh;
   text-transform: uppercase;
   word-break: break-word;
   letter-spacing: -4px;
@@ -288,8 +340,11 @@ h1 ._lg {
   font-size: 1.36em;
   text-transform: lowercase;
   font-style: italic;
-  margin-top: -0.085em;
   display: block;
+  font-weight: 500;
+}
+h1 span {
+  line-height: inherit !important;
 }
 
 h2 {
@@ -508,6 +563,9 @@ svg {
   height: 100%;
 }
 .main__content._admin {
+  padding-left: 96px;
+}
+.main__content._sidebar {
   padding-left: 368px;
 }
 
@@ -2780,6 +2838,10 @@ svg {
   top: 2px;
   right: 0;
   border: 1px solid #000000;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .dashboardHeader__group-avatar img {
   width: 100%;
@@ -2787,6 +2849,9 @@ svg {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: inherit;
+}
+.dashboardHeader__group-avatar.online:after {
+  opacity: 1;
 }
 .dashboardHeader__group h5 {
   font-weight: 400;
@@ -2805,6 +2870,13 @@ svg {
   border-radius: 50%;
   top: -2px;
   right: -1px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.dashboardHeader .button.notification .ico:after {
+  opacity: 1;
 }
 .dashboardHeader._sm {
   margin-bottom: 8px;
@@ -2850,7 +2922,7 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 3px;
-  background: rgb(255, 246, 39);
+  background: #fff627;
 }
 .dashboardInfo__item-image {
   display: -webkit-box;
@@ -3285,9 +3357,9 @@ svg {
 
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   height: 100dvh;
-  min-height: 950px;
+  min-height: 600px;
 }
 .hero__inner {
   display: -webkit-box;
@@ -3301,8 +3373,8 @@ svg {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  gap: 50px;
-  padding: 140px 0 32px 80px;
+  gap: 30px;
+  padding: 120px 0 32px 80px;
 }
 .hero__inner-group {
   display: -webkit-box;
@@ -3907,20 +3979,24 @@ svg {
 
 @media (max-width: 1280px) {
   h1 {
-    font-size: 90px;
+    font-size: 9cqh;
   }
+
   h4._extra-lg {
     font-size: 45px;
   }
   h4._lg {
     font-size: 42px;
   }
+
   .list {
     font-size: 16px;
   }
+
   .header__inner {
     padding-left: 60px;
   }
+
   .about__inner .video {
     width: calc(54% + 110px);
   }
@@ -3934,45 +4010,55 @@ svg {
   .about__inner-box {
     gap: 20px;
   }
+
   .benefits__inner-images .bubles__shape._yellow {
     left: -270px;
     bottom: -270px;
   }
-  .hero {
-    min-height: 850px;
-  }
+
   .hero__inner {
-    padding: 140px 0 32px 60px;
+    padding: 120px 0 32px 60px;
   }
 }
 @media (max-width: 1160px) {
   .autoContainer {
     padding: 0 40px;
   }
+
+  h1 {
+    font-size: 8.5vh;
+  }
+
   h4._extra-lg {
     font-size: 40px;
   }
   h4._lg {
     font-size: 38px;
   }
+
   p {
     font-size: 18px;
   }
+
   .button--primary._extra {
     font-size: 16px;
   }
   .button--primary._extra-lg {
     font-size: 16px;
   }
+
   .sponsors {
     padding-bottom: 80px;
   }
+
   .about {
     padding: 80px 0;
   }
+
   .achievement {
     padding: 70px 0;
   }
+
   .benefits {
     padding: 80px 0;
   }
@@ -3982,9 +4068,11 @@ svg {
   .benefits .autoContainer {
     padding-right: 40px;
   }
+
   .price {
     padding: 80px 0;
   }
+
   .footer {
     padding-top: 80px;
   }
@@ -3993,18 +4081,18 @@ svg {
   .autoContainer {
     padding: 0 30px;
   }
-  h1 {
-    font-size: 80px;
-  }
+
   h1 ._lg {
     font-size: 1.2em;
   }
+
   h4._extra-lg {
     font-size: 35px;
   }
   h4._lg {
     font-size: 35px;
   }
+
   h5 {
     font-size: 18px;
   }
@@ -4014,12 +4102,14 @@ svg {
   h5._extra-sm {
     font-size: 16px;
   }
+
   p {
     font-size: 16px;
   }
   p._sm {
     font-size: 16px;
   }
+
   .button--primary {
     min-width: 120px;
   }
@@ -4032,18 +4122,22 @@ svg {
   .button--secondary {
     font-size: 20px;
   }
+
   .logo {
     font-size: 30px;
   }
   .logo--lg {
     font-size: 20px;
   }
+
   .list {
     font-size: 14px;
   }
+
   .toggle {
     font-size: 13px;
   }
+
   .header {
     padding: 25px 0;
   }
@@ -4062,6 +4156,7 @@ svg {
     z-index: 2;
     left: 15px;
   }
+
   .hero__inner {
     padding: 120px 0 32px 45px;
   }
@@ -4072,6 +4167,7 @@ svg {
     width: 70px;
     height: 70px;
   }
+
   .sponsors__inner {
     gap: 150px;
   }
@@ -4085,6 +4181,7 @@ svg {
     width: 140px;
     height: 30px;
   }
+
   .achievement__inner {
     padding: 50px 30px;
   }
@@ -4098,6 +4195,7 @@ svg {
     width: 45px;
     height: 45px;
   }
+
   .benefits {
     padding: 80px 0;
   }
@@ -4107,6 +4205,7 @@ svg {
   .benefits .autoContainer {
     padding-right: 30px;
   }
+
   .price__inner-tools {
     padding-bottom: 35px;
   }
@@ -4116,6 +4215,7 @@ svg {
   .price__inner-group-text {
     padding: 35px 0;
   }
+
   .footer__inner {
     padding: 60px;
   }
@@ -4124,18 +4224,18 @@ svg {
   .autoContainer {
     padding: 0 30px;
   }
+
   h1 {
-    font-size: 70px;
+    font-size: 7.5vh;
   }
+
   h4._extra-lg {
     font-size: 32px;
   }
   h4._lg {
     font-size: 32px;
   }
-  .hero {
-    min-height: 750px;
-  }
+
   .hero__inner {
     padding: 100px 0 32px 45px;
   }
@@ -4147,6 +4247,7 @@ svg {
     width: 65px;
     height: 65px;
   }
+
   .sponsors {
     padding-bottom: 60px;
   }
@@ -4163,9 +4264,11 @@ svg {
     width: 130px;
     height: 27px;
   }
+
   .swiper-slide {
     margin: 0 20px;
   }
+
   .about {
     padding: 60px 0;
   }
@@ -4182,12 +4285,15 @@ svg {
   .about__inner-box {
     gap: 15px;
   }
+
   .achievement {
     padding: 60px 0;
   }
+
   .benefits {
     padding: 60px 0;
   }
+
   .price {
     padding: 60px 0;
   }
@@ -4204,6 +4310,7 @@ svg {
   .price__inner-group-text {
     padding: 30px 0;
   }
+
   .footer {
     padding-top: 60px;
   }
@@ -4227,12 +4334,15 @@ svg {
   h1 {
     font-size: 60px;
   }
+
   h4 {
     font-size: 40px;
   }
+
   h5._extra-sm {
     font-size: 14px;
   }
+
   .button {
     font-size: 12px;
   }
@@ -4251,12 +4361,14 @@ svg {
   .button--secondary {
     font-size: 20px;
   }
+
   .logo {
     font-size: 28px;
   }
   .logo--lg {
     font-size: 19px;
   }
+
   .header {
     padding: 20px 0;
   }
@@ -4266,9 +4378,7 @@ svg {
   .header.sticky .logo {
     font-size: 26px;
   }
-  .hero {
-    min-height: 700px;
-  }
+
   .hero .video {
     width: 200px;
   }
@@ -4276,6 +4386,7 @@ svg {
     width: 60px;
     height: 60px;
   }
+
   .about__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4327,6 +4438,7 @@ svg {
   .about__inner h4 {
     max-width: 450px;
   }
+
   .achievement__inner {
     padding: 50px 20px;
   }
@@ -4346,6 +4458,7 @@ svg {
   .achievementItem h4._lg {
     font-size: 28px;
   }
+
   .benefits__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -4390,6 +4503,7 @@ svg {
   .benefits .autoContainer {
     padding: 0 30px;
   }
+
   .price__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4438,33 +4552,36 @@ svg {
   h1 {
     font-size: 50px;
   }
+
   p {
     font-size: 14px;
   }
   p._sm {
     font-size: 14px;
   }
+
   h5._extra-sm {
     font-size: 12px;
   }
+
   h4 {
     font-size: 35px;
   }
+
   h6 {
     font-size: 12px;
   }
   h6._lg {
     font-size: 12px;
   }
+
   .logo {
     font-size: 26px;
   }
   .logo--lg {
     font-size: 18px;
   }
-  .hero {
-    min-height: 600px;
-  }
+
   .hero__inner {
     gap: 40px;
   }
@@ -4475,6 +4592,7 @@ svg {
     width: 55px;
     height: 55px;
   }
+
   .sponsors__inner {
     gap: 100px;
   }
@@ -4488,9 +4606,11 @@ svg {
     width: 130px;
     height: 25px;
   }
+
   .swiper-slide {
     margin: 0 15px;
   }
+
   .footer__inner {
     padding: 30px;
   }
@@ -4511,18 +4631,21 @@ svg {
   .button--primary::before {
     border: 1px solid transparent;
   }
+
   .logo {
     font-size: 24px;
   }
   .logo--lg {
     font-size: 16px;
   }
+
   .bubles__shape {
     -webkit-filter: blur(200px);
             filter: blur(200px);
     width: 350px;
     height: 350px;
   }
+
   .list .bubles {
     -webkit-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
@@ -4547,6 +4670,7 @@ svg {
     left: -50px;
     bottom: -50px;
   }
+
   .header__inner {
     padding-left: 0;
   }
@@ -4559,6 +4683,7 @@ svg {
     width: 22px;
     height: 10px;
   }
+
   .hero__inner {
     padding-left: 0;
   }
@@ -4575,6 +4700,7 @@ svg {
   .hero .video__border {
     display: none;
   }
+
   .sponsors {
     padding: 0 0 50px 0;
   }
@@ -4588,6 +4714,7 @@ svg {
     width: 125px;
     height: 23px;
   }
+
   .about {
     padding: 50px 0;
   }
@@ -4595,6 +4722,7 @@ svg {
     bottom: -170px;
     left: -100px;
   }
+
   .achievement {
     padding: 50px 0;
   }
@@ -4630,6 +4758,7 @@ svg {
     left: -300px;
     bottom: unset;
   }
+
   .benefits {
     padding: 80px 0 50px;
   }
@@ -4641,12 +4770,14 @@ svg {
     left: -100px;
     bottom: -50px;
   }
+
   .price {
     padding: 50px 0;
   }
   .price__inner-image .ratioImage {
     padding-bottom: 120%;
   }
+
   .footer {
     padding-top: 50px;
   }
@@ -4681,12 +4812,14 @@ svg {
   .header.sticky .logo {
     font-size: 20px;
   }
+
   .nav__inner {
     padding: 50px 30px;
   }
   .nav__inner-link {
     font-size: 16px;
   }
+
   .hero__inner-footer {
     gap: 40px;
   }
@@ -4696,6 +4829,7 @@ svg {
   .hero__bg-image._sm {
     width: 90%;
   }
+
   .achievementItem__image {
     width: 35px;
     height: 35px;
@@ -4708,6 +4842,7 @@ svg {
   .toggle__text {
     font-size: 14px;
   }
+
   .about__inner {
     gap: 32px;
   }
@@ -4723,10 +4858,12 @@ svg {
     width: 62px;
     height: 62px;
   }
+
   .achievementItem__image {
     width: 30px;
     height: 30px;
   }
+
   .benefitsImage._lg .ratioImage {
     padding-bottom: 72%;
     border-radius: 0 54px 19px 0;
@@ -4754,6 +4891,7 @@ svg {
     -webkit-filter: blur(10px);
             filter: blur(10px);
   }
+
   .price__inner-tools {
     padding-bottom: 22px;
   }
@@ -4774,9 +4912,14 @@ svg {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
+
+  .hero {
+    min-height: 700px;
+  }
   .hero h1 span br {
     display: block;
   }
+
   .login__inner {
     min-height: 650px;
   }
@@ -4795,6 +4938,7 @@ svg {
     font-weight: 500;
     margin-top: unset;
   }
+
   p {
     font-size: 12px;
   }
@@ -4802,6 +4946,7 @@ svg {
     font-size: 12px;
     line-height: 1.5em;
   }
+
   h5 {
     font-size: 15px;
   }
@@ -4811,15 +4956,18 @@ svg {
   h5._extra-sm {
     font-size: 10px;
   }
+
   h4 {
     font-size: 29px;
   }
+
   h6 {
     font-size: 10px;
   }
   h6._lg {
     font-size: 10px;
   }
+
   .button {
     font-size: 10px;
     min-width: 92px;
@@ -4836,15 +4984,18 @@ svg {
     font-size: 17px;
     padding: 0.87em 1.2em;
   }
+
   .logo {
     font-size: 22px;
   }
   .logo--lg {
     font-size: 15px;
   }
+
   .list {
     font-size: 12px;
   }
+
   .range {
     padding-bottom: 45px;
   }
@@ -4874,6 +5025,7 @@ svg {
   .range input[type=range]::-webkit-slider-runnable-track {
     height: 6px;
   }
+
   .toggle {
     gap: 8px;
   }
@@ -4894,10 +5046,12 @@ svg {
     -webkit-transform: translate(10px, -50%);
             transform: translate(10px, -50%);
   }
+
   .achievementItem__image {
     width: 27px;
     height: 27px;
   }
+
   .footer__inner-column {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -4909,6 +5063,7 @@ svg {
   .footer__inner-copy {
     font-size: 12px;
   }
+
   .login__inner {
     padding: 30px 0;
     min-height: 570px;

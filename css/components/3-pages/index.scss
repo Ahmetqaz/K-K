@@ -1,15 +1,15 @@
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   height: 100dvh;
-  min-height: 950px;
+  min-height: 600px;
   &__inner {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    gap: 50px;
-    padding: 140px 0 32px 80px;
+    gap: 30px;
+    padding: 120px 0 32px 80px;
     &-group {
       display: flex;
       align-items: center;
@@ -535,9 +535,8 @@
     }
   }
   .hero {
-    min-height: 850px;
     &__inner {
-      padding: 140px 0 32px 60px;
+      padding: 120px 0 32px 60px;
     }
   }
 }
@@ -642,7 +641,6 @@
 }
 @mixin index-940 {
   .hero {
-    min-height: 750px;
     &__inner {
       padding: 100px 0 32px 45px;
     }
@@ -729,9 +727,6 @@
 }
 @mixin index-840 {
   .hero {
-    min-height: 700px;
-    &__inner {
-    }
     .video {
       width: 200px;
       &__box {
@@ -911,7 +906,6 @@
 }
 @mixin index-768 {
   .hero {
-    min-height: 600px;
     &__inner {
       gap: 40px;
     }
@@ -1188,6 +1182,7 @@
     }
   }
   .hero {
+    min-height: 700px;
     h1 {
       span {
         br {
