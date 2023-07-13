@@ -815,7 +815,7 @@
   }
   .benefits {
     &__inner {
-      flex-direction: column;
+      flex-direction: column-reverse;
       gap: 70px;
       &-images {
         width: calc(100% + 30px);
