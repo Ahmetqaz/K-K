@@ -129,12 +129,19 @@
           top: 2px;
           right: 0;
           border: 1px solid $black;
+          opacity: 0;
+          @include transition;
         }
         img {
           width: 100%;
           height: 100%;
           object-fit: cover;
           border-radius: inherit;
+        }
+        &.online {
+          &:after {
+            opacity: 1;
+          }
         }
       }
       h5 {
@@ -155,6 +162,15 @@
           border-radius: 50%;
           top: -2px;
           right: -1px;
+          opacity: 0;
+          @include transition;
+        }
+      }
+      &.notification {
+        .ico {
+          &:after {
+            opacity: 1;
+          }
         }
       }
     }
@@ -240,6 +256,10 @@
           }
         }
       }
+    }
+    &._big {
+      width: calc(25% - 5px);
+      font-size: 18px;
     }
   }
   &Table {
@@ -548,5 +568,30 @@
     overflow: auto;
     height: calc(100vh - 615px);
     min-height: 220px;
+  }
+}
+@mixin dashboard-1280 {
+  .dashboard {
+    &__inner {
+      &-row {
+        flex-wrap: wrap;
+      }
+    }
+    &Info {
+      &._big {
+        width: calc(50% - 10px);
+        max-width: unset;
+      }
+    }
+  }
+}
+@mixin dashboard-1160 {
+  .dashboard {
+    .autoContainer {
+      padding: 0 15px;
+    }
+    &Info {
+      font-size: 18px;
+    }
   }
 }

@@ -279,7 +279,7 @@
 }
 /* Typography */
 h1 {
-  font-size: 104px;
+  font-size: 10.3vh;
   text-transform: uppercase;
   word-break: break-word;
   letter-spacing: -4px;
@@ -288,8 +288,11 @@ h1 ._lg {
   font-size: 1.36em;
   text-transform: lowercase;
   font-style: italic;
-  margin-top: -0.085em;
   display: block;
+  font-weight: 500;
+}
+h1 span {
+  line-height: inherit !important;
 }
 
 h2 {
@@ -2243,6 +2246,9 @@ form {
   height: 100%;
 }
 .main__content._admin {
+  padding-left: 96px;
+}
+.main__content._sidebar {
   padding-left: 368px;
 }
 
@@ -2833,6 +2839,10 @@ form {
   top: 2px;
   right: 0;
   border: 1px solid #000000;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
 }
 .dashboardHeader__group-avatar img {
   width: 100%;
@@ -2840,6 +2850,9 @@ form {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: inherit;
+}
+.dashboardHeader__group-avatar.online:after {
+  opacity: 1;
 }
 .dashboardHeader__group h5 {
   font-weight: 400;
@@ -2858,6 +2871,13 @@ form {
   border-radius: 50%;
   top: -2px;
   right: -1px;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out 0s;
+  transition: all 0.2s ease-in-out 0s;
+  -moz-transition: all 0.2s ease-in-out 0s;
+}
+.dashboardHeader .button.notification .ico:after {
+  opacity: 1;
 }
 .dashboardHeader._sm {
   margin-bottom: 8px;
@@ -2977,6 +2997,10 @@ form {
 }
 .dashboardInfo._lg .dashboardInfo__item {
   height: calc(50% - 10px);
+}
+.dashboardInfo._big {
+  width: calc(25% - 5px);
+  font-size: 18px;
 }
 .dashboardTable {
   background-color: #0e1013;
@@ -3338,9 +3362,9 @@ form {
 
 .hero {
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   height: 100dvh;
-  min-height: 950px;
+  min-height: 720px;
 }
 .hero__inner {
   display: -webkit-box;
@@ -3354,8 +3378,8 @@ form {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 100%;
-  gap: 50px;
-  padding: 140px 0 32px 80px;
+  gap: 30px;
+  padding: 120px 0 32px 80px;
 }
 .hero__inner-group {
   display: -webkit-box;
@@ -3960,13 +3984,19 @@ form {
 
 @media (max-width: 1280px) {
   h1 {
-    font-size: 90px;
+    font-size: 9cqh;
   }
   h4._extra-lg {
     font-size: 45px;
   }
   h4._lg {
     font-size: 42px;
+  }
+  .main__content {
+    padding-left: 200px;
+  }
+  .main__content._sidebar {
+    padding-left: 300px;
   }
   .list {
     font-size: 16px;
@@ -3976,6 +4006,22 @@ form {
   }
   .header__inner {
     padding-left: 60px;
+  }
+  .sidebar {
+    width: 200px;
+  }
+  .sidebar .logo {
+    font-size: 16px;
+  }
+  .sidebar__inner-link {
+    font-size: 18px;
+  }
+  .sidebar._admin {
+    width: 190px;
+    left: 110px;
+  }
+  .sidebar._admin .sidebarLink {
+    font-size: 18px;
   }
   .about__inner .video {
     width: calc(54% + 110px);
@@ -3994,16 +4040,24 @@ form {
     left: -270px;
     bottom: -270px;
   }
-  .hero {
-    min-height: 850px;
-  }
   .hero__inner {
-    padding: 140px 0 32px 60px;
+    padding: 120px 0 32px 60px;
+  }
+  .dashboard__inner-row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .dashboardInfo._big {
+    width: calc(50% - 10px);
+    max-width: unset;
   }
 }
 @media (max-width: 1160px) {
   .autoContainer {
     padding: 0 40px;
+  }
+  h1 {
+    font-size: 8.5vh;
   }
   h4._extra-lg {
     font-size: 40px;
@@ -4047,13 +4101,16 @@ form {
   .footer {
     padding-top: 80px;
   }
+  .dashboard .autoContainer {
+    padding: 0 15px;
+  }
+  .dashboardInfo {
+    font-size: 18px;
+  }
 }
 @media (max-width: 1025px) {
   .autoContainer {
     padding: 0 30px;
-  }
-  h1 {
-    font-size: 80px;
   }
   h1 ._lg {
     font-size: 1.2em;
@@ -4184,16 +4241,13 @@ form {
     padding: 0 30px;
   }
   h1 {
-    font-size: 70px;
+    font-size: 7.5vh;
   }
   h4._extra-lg {
     font-size: 32px;
   }
   h4._lg {
     font-size: 32px;
-  }
-  .hero {
-    min-height: 750px;
   }
   .hero__inner {
     padding: 100px 0 32px 45px;
@@ -4324,9 +4378,6 @@ form {
   }
   .header.sticky .logo {
     font-size: 26px;
-  }
-  .hero {
-    min-height: 700px;
   }
   .hero .video {
     width: 200px;
@@ -4520,9 +4571,6 @@ form {
   }
   .logo--lg {
     font-size: 18px;
-  }
-  .hero {
-    min-height: 600px;
   }
   .hero__inner {
     gap: 40px;
@@ -4832,6 +4880,9 @@ form {
     gap: 10px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  }
+  .hero {
+    min-height: 700px;
   }
   .hero h1 span br {
     display: block;

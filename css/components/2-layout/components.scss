@@ -1,3 +1,48 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 100%;
+  &__content {
+    padding-left: 250px;
+    position: relative;
+    height: 100%;
+    &-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      &:after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: rgba($black, 0.2);
+        backdrop-filter: blur(90px);
+        z-index: 2;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    &._admin {
+      padding-left: 96px;
+    }
+    &._sidebar {
+      padding-left: 368px;
+    }
+  }
+}
+.autoContainer {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 0 60px;
+}
 .input {
   display: flex;
   width: 100%;
@@ -980,6 +1025,14 @@ form {
   }
 }
 @mixin components-1280 {
+  .main {
+    &__content {
+      padding-left: 200px;
+      &._sidebar {
+        padding-left: 300px;
+      }
+    }
+  }
   .list {
     font-size: 16px;
   }

@@ -3,6 +3,7 @@
   @include components-1280;
   @include header-1280;
   @include index-1280;
+  @include dashboard-1280;
 }
 @media (max-width: 1160px) {
   .autoContainer {
@@ -12,6 +13,7 @@
   @include components-1160;
   @include index-1160;
   @include footer-1160;
+  @include dashboard-1160;
 }
 @media (max-width: 1025px) {
   .autoContainer {

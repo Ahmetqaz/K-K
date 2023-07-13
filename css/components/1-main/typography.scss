@@ -13,7 +13,7 @@
 
 /* Typography */
 h1 {
-  font-size: 104px;
+  font-size: 10.3vh;
   text-transform: uppercase;
   word-break: break-word;
   letter-spacing: -4px;
@@ -21,8 +21,11 @@ h1 {
     font-size: 1.36em;
     text-transform: lowercase;
     font-style: italic;
-    margin-top: -0.085em;
     display: block;
+    font-weight: 500;
+  }
+  span {
+    line-height: inherit !important;
   }
 }
 h2 {
@@ -106,7 +109,7 @@ p {
 }
 @mixin typography-1280 {
   h1 {
-    font-size: 90px;
+    font-size: 9cqh;
   }
   h4 {
     &._extra-lg {
@@ -118,6 +121,9 @@ p {
   }
 }
 @mixin typography-1160 {
+  h1 {
+    font-size: 8.5vh;
+  }
   h4 {
     &._extra-lg {
       font-size: 40px;
@@ -132,7 +138,6 @@ p {
 }
 @mixin typography-1025 {
   h1 {
-    font-size: 80px;
     ._lg {
       font-size: 1.2em;
     }
@@ -163,7 +168,7 @@ p {
 }
 @mixin typography-940 {
   h1 {
-    font-size: 70px;
+    font-size: 7.5vh;
   }
   h4 {
     &._extra-lg {
