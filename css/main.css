@@ -467,56 +467,6 @@ svg {
   pointer-events: none;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
-  min-height: 100%;
-}
-.main__content {
-  padding-left: 250px;
-  position: relative;
-  height: 100%;
-}
-.main__content-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.main__content-bg:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(90px);
-          backdrop-filter: blur(90px);
-  z-index: 2;
-}
-.main__content-bg img {
-  width: 100%;
-  height: 100%;
-}
-.main__content._admin {
-  padding-left: 368px;
-}
-
-.autoContainer {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
-
 .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -607,6 +557,25 @@ svg {
 }
 .input--ico .ico:hover {
   color: #9c9ca4;
+}
+.input--ico .ico._eyeIco::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 120%;
+  width: 2px;
+  background: currentColor;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.input--ico .ico._eyeIco.active::after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  opacity: 1;
 }
 .input--ico._stroke svg {
   stroke: currentColor;
@@ -781,7 +750,7 @@ svg {
   padding: 1em 2em;
 }
 .button--primary:hover:after {
-  opacity: 0.1;
+  opacity: 0.2;
 }
 .button--secondary {
   font-size: 24px;
@@ -839,7 +808,7 @@ svg {
   fill: currentColor;
 }
 .button--social:hover {
-  background: rgba(31, 29, 35, 0.2);
+  background: rgba(31, 29, 35, 0.4);
 }
 .button--ico {
   background-color: #0d0d0d;
@@ -1237,6 +1206,7 @@ svg {
 }
 
 .ico {
+  display: inline-block;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1532,6 +1502,57 @@ svg {
           backdrop-filter: blur(5px);
   -webkit-clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
           clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
+}
+
+canvas {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.doughnutChart {
+  position: relative;
+  z-index: 0;
+}
+.doughnutChart__info {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+.doughnutChart__info strong {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.doughnutChart__info small {
+  color: #bababa;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.65em;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 
 .footer {
@@ -2191,6 +2212,38 @@ svg {
           flex-direction: column;
   overflow: hidden;
   min-height: 100%;
+}
+.main__content {
+  padding-left: 250px;
+  position: relative;
+  height: 100%;
+}
+.main__content-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.main__content-bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(90px);
+          backdrop-filter: blur(90px);
+  z-index: 2;
+}
+.main__content-bg img {
+  width: 100%;
+  height: 100%;
+}
+.main__content._admin {
+  padding-left: 368px;
 }
 
 .autoContainer {
@@ -3918,6 +3971,9 @@ svg {
   .list {
     font-size: 16px;
   }
+  .doughnutChart__info {
+    font-size: 20px;
+  }
   .header__inner {
     padding-left: 60px;
   }
@@ -3963,6 +4019,9 @@ svg {
   }
   .button--primary._extra-lg {
     font-size: 16px;
+  }
+  .doughnutChart__info {
+    font-size: 18px;
   }
   .sponsors {
     padding-bottom: 80px;
