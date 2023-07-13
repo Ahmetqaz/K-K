@@ -246,6 +246,7 @@
     background-color: $black-10;
     border-radius: 27px;
     overflow: hidden;
+    position: relative;
     &__container {
       display: flex;
       align-items: center;
@@ -281,6 +282,22 @@
       }
       h5 {
         font-weight: 600;
+      }
+    }
+    .bubles {
+      z-index: 2;
+      &__shape {
+        opacity: 0.15;
+        &._pink {
+          top: -200px;
+          right: -200px;
+        }
+        &._yellow {
+          top: unset;
+          right: unset;
+          bottom: -20%;
+          left: -200px;
+        }
       }
     }
   }
@@ -466,6 +483,8 @@
   width: 100%;
   font-size: 12px;
   border-collapse: collapse;
+  position: relative;
+  z-index: 2;
   thead {
     position: sticky;
     top: 0;
