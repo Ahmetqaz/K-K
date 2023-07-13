@@ -2929,6 +2929,7 @@ svg {
   background-color: #0e1013;
   border-radius: 27px;
   overflow: hidden;
+  position: relative;
 }
 .dashboardTable__container {
   display: -webkit-box;
@@ -2976,6 +2977,22 @@ svg {
 }
 .dashboardTable__container h5 {
   font-weight: 600;
+}
+.dashboardTable .bubles {
+  z-index: 2;
+}
+.dashboardTable .bubles__shape {
+  opacity: 0.15;
+}
+.dashboardTable .bubles__shape._pink {
+  top: -200px;
+  right: -200px;
+}
+.dashboardTable .bubles__shape._yellow {
+  top: unset;
+  right: unset;
+  bottom: -20%;
+  left: -200px;
 }
 .dashboardService {
   position: relative;
@@ -3198,6 +3215,8 @@ svg {
   width: 100%;
   font-size: 12px;
   border-collapse: collapse;
+  position: relative;
+  z-index: 2;
 }
 .table thead {
   position: sticky;
