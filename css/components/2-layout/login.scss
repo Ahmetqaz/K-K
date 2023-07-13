@@ -69,15 +69,6 @@
       }
     }
   }
-  .logo {
-    flex-direction: column;
-    gap: 14px;
-    font-size: 22px;
-    &__image {
-      width: 4.1em;
-      height: 4.1em;
-    }
-  }
   h6 {
     font-weight: 400;
     a {
@@ -117,7 +108,7 @@
     }
     &-shape {
       position: absolute;
-      max-width: 1068px;
+      width: 1068px;
       left: -4%;
       bottom: -20%;
       img {
@@ -207,8 +198,9 @@
     }
     &__bg {
       &-shape {
-        left: -10%;
-        bottom: -5%;
+        left: -100%;
+        bottom: -20%;
+        width: 800px;
       }
     }
   }

@@ -46,6 +46,13 @@
       right: 5%;
       bottom: 0;
     }
+    h1 {
+      span {
+        br {
+          display: none;
+        }
+      }
+    }
   }
   &__bg {
     position: absolute;
@@ -1177,6 +1184,15 @@
       &-wrapper {
         gap: 10px;
         flex-wrap: wrap;
+      }
+    }
+  }
+  .hero {
+    h1 {
+      span {
+        br {
+          display: block;
+        }
       }
     }
   }
