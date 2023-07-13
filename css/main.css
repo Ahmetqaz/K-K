@@ -2614,8 +2614,6 @@ svg {
   top: 0;
   left: 0;
   background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(90px);
-          backdrop-filter: blur(90px);
   z-index: 2;
 }
 .login__bg-image {
@@ -2623,6 +2621,8 @@ svg {
   height: 100%;
   position: relative;
   z-index: -2;
+  -webkit-filter: blur(90px);
+          filter: blur(90px);
 }
 .login__bg-image img {
   width: 100%;
