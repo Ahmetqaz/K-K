@@ -512,7 +512,7 @@
     &__bg {
       &-image {
         &._sm {
-          width: 95%;
+          width: 85%;
         }
       }
     }
@@ -791,6 +791,7 @@
           display: none;
           &:nth-child(2) {
             display: flex;
+            border-radius: 98px 0 0 35px;
           }
         }
         &-parts {
@@ -1119,8 +1120,10 @@
       }
       &-image {
         .ratioImage {
-          border-radius: 48px 0 0 17px;
           padding-bottom: 64%;
+          &:nth-child(2) {
+            border-radius: 48px 0 0 17px;
+          }
         }
         &-parts {
           width: 62px;
