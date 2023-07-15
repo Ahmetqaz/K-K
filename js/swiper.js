@@ -3,11 +3,13 @@ const swiper = new Swiper(".swiper", {
   slidesPerView: "auto",
   autoplay: true,
   speed: 3000,
+  freeMode: true,
+  speed: 5000,
+  freeModeMomentum: false,
   autoplay: {
     delay: 0,
     disableOnInteraction: false,
-    pauseOnMouseEnter: true,
+    pauseOnMouseEnter: false,
     stopOnLastSlide: false,
-    waitForTransition: false,
   },
 });

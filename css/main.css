@@ -1194,6 +1194,7 @@ svg {
 }
 .logo .text {
   font-weight: 700;
+  text-transform: uppercase;
 }
 .logo--lg {
   -webkit-box-orient: vertical;
