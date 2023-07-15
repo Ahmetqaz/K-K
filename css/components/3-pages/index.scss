@@ -89,7 +89,14 @@
       &._sm {
         z-index: 2;
         width: 80%;
-        height: 60%;
+        height: unset;
+
+        .video {
+          position: absolute;
+          top: 50%;
+          left: 66.5%;
+          width: 13.5%;
+        }
       }
     }
   }
@@ -500,6 +507,17 @@
   }
 }
 
+@mixin index-1460 {
+  .hero {
+    &__bg {
+      &-image {
+        &._sm {
+          width: 95%;
+        }
+      }
+    }
+  }
+}
 @mixin index-1280 {
   .about {
     &__inner {
@@ -570,12 +588,11 @@
     &__inner {
       padding: 120px 0 32px 45px;
     }
-    .video {
-      width: 240px;
-      &__box {
-        &-button {
-          width: 70px;
-          height: 70px;
+    &__bg {
+      &-image {
+        &._sm {
+          width: 95%;
+          bottom: 5%;
         }
       }
     }
