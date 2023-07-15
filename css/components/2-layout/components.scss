@@ -1,48 +1,4 @@
-.main {
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-  min-height: 100%;
-  &__content {
-    padding-left: 250px;
-    position: relative;
-    height: 100%;
-    &-bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      &:after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        background: rgba($black, 0.2);
-        backdrop-filter: blur(90px);
-        z-index: 2;
-      }
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-    &._admin {
-      padding-left: 96px;
-    }
-    &._sidebar {
-      padding-left: 368px;
-    }
-  }
-}
-.autoContainer {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
+
 .input {
   display: flex;
   width: 100%;
@@ -107,6 +63,27 @@
       }
       &:hover {
         color: $gray-2;
+      }
+
+      &._eyeIco {
+        &::after {
+          position: absolute;
+          content: "";
+          top: 50%;
+          left: 50%;
+          height: 120%;
+          width: 2px;
+          background: currentColor;
+          transform: translateY(-50%);
+          opacity: 0;
+          transition: 0.3s ease;
+        }
+        &.active {
+          &::after {
+            transform: translateY(-50%) rotate(45deg);
+            opacity: 1;
+          }
+        }
       }
     }
     &._stroke {
@@ -266,7 +243,7 @@
     }
     &:hover {
       &:after {
-        opacity: 0.1;
+        opacity: 0.2;
       }
     }
   }
@@ -318,7 +295,7 @@
       }
     }
     &:hover {
-      background: rgba($black-6, 0.2);
+      background: rgba($black-6, 0.4);
     }
   }
   &--ico {
@@ -692,6 +669,7 @@
   }
 }
 .ico {
+  display: inline-block;
   color: $white;
   display: flex;
   align-items: center;
@@ -957,7 +935,51 @@
     );
   }
 }
+canvas {
+  width: 100%;
+}
+form {
+  width: 100%;
+}
+.doughnutChart {
+  position: relative;
+  z-index: 0;
 
+  &__info {
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+
+    //display
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    //font
+    color: $white;
+    font-size: 24px;
+    font-family: $font-primary;
+
+    strong {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 1em;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+    }
+    small {
+      color: $white-5;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 0.65em;
+      line-height: 1.5;
+      letter-spacing: -0.02em;
+    }
+  }
+}
 @mixin components-1280 {
   .main {
     &__content {
@@ -970,6 +992,11 @@
   .list {
     font-size: 16px;
   }
+  .doughnutChart {
+    &__info {
+      font-size: 20px;
+    }
+  }
 }
 @mixin components-1160 {
   .button {
@@ -980,6 +1007,11 @@
       &._extra-lg {
         font-size: 16px;
       }
+    }
+  }
+  .doughnutChart {
+    &__info {
+      font-size: 18px;
     }
   }
 }

@@ -193,135 +193,83 @@
 }
 
 .icon-clipboardtext:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e800";
+} /* '' */
 .icon-clipboardtick:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e801";
+} /* '' */
 .icon-devices:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e802";
+} /* '' */
 .icon-diagram:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e803";
+} /* '' */
 .icon-eye:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e804";
+} /* '' */
 .icon-home:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e805";
+} /* '' */
 .icon-profile2user:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e806";
+} /* '' */
 .icon-receiptitem:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e807";
+} /* '' */
 .icon-truckfast:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e808";
+} /* '' */
 .icon-car:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e809";
+} /* '' */
 .icon-cardano:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e80a";
+} /* '' */
 .icon-category2:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e80b";
+} /* '' */
 .icon-icon-1:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e80c";
+} /* '' */
 .icon-icon-4:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e80d";
+} /* '' */
 .icon-icon-5:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e80e";
+} /* '' */
 .icon-icon-3:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e80f";
+} /* '' */
 .icon-icon-8:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e810";
+} /* '' */
 .icon-icon-7:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e811";
+} /* '' */
 .icon-icon-6:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e812";
+} /* '' */
 .icon-icon-2:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e813";
+} /* '' */
 .icon-arrow-right:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e814";
+} /* '' */
 .icon-arrow-left:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e815";
+} /* '' */
 .icon-printer:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e817";
+} /* '' */
 .icon-documenttext:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e818";
+} /* '' */
 .icon-copy:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e819";
+} /* '' */
 .icon-down-open:before {
-  content: "";
-}
-
-/* '' */
+  content: "\e81f";
+} /* '' */
 @font-face {
   font-family: "Satoshi-Bold";
   src: url("../font-text/fonts/Satoshi-Bold.woff2") format("woff2"), url("../font-text/fonts/Satoshi-Bold.woff") format("woff"), url("../font-text/fonts/Satoshi-Bold.ttf") format("truetype");
@@ -522,59 +470,6 @@ svg {
   pointer-events: none;
 }
 
-.main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  overflow: hidden;
-  min-height: 100%;
-}
-.main__content {
-  padding-left: 250px;
-  position: relative;
-  height: 100%;
-}
-.main__content-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-}
-.main__content-bg:after {
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: rgba(0, 0, 0, 0.2);
-  -webkit-backdrop-filter: blur(90px);
-          backdrop-filter: blur(90px);
-  z-index: 2;
-}
-.main__content-bg img {
-  width: 100%;
-  height: 100%;
-}
-.main__content._admin {
-  padding-left: 96px;
-}
-.main__content._sidebar {
-  padding-left: 368px;
-}
-
-.autoContainer {
-  max-width: 1380px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
-
 .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -665,6 +560,25 @@ svg {
 }
 .input--ico .ico:hover {
   color: #9c9ca4;
+}
+.input--ico .ico._eyeIco::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  height: 120%;
+  width: 2px;
+  background: currentColor;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+.input--ico .ico._eyeIco.active::after {
+  -webkit-transform: translateY(-50%) rotate(45deg);
+          transform: translateY(-50%) rotate(45deg);
+  opacity: 1;
 }
 .input--ico._stroke svg {
   stroke: currentColor;
@@ -839,7 +753,7 @@ svg {
   padding: 1em 2em;
 }
 .button--primary:hover:after {
-  opacity: 0.1;
+  opacity: 0.2;
 }
 .button--secondary {
   font-size: 24px;
@@ -897,7 +811,7 @@ svg {
   fill: currentColor;
 }
 .button--social:hover {
-  background: rgba(31, 29, 35, 0.2);
+  background: rgba(31, 29, 35, 0.4);
 }
 .button--ico {
   background-color: #0d0d0d;
@@ -1295,6 +1209,7 @@ svg {
 }
 
 .ico {
+  display: inline-block;
   color: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1590,6 +1505,57 @@ svg {
           backdrop-filter: blur(5px);
   -webkit-clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
           clip-path: polygon(50% 0%, 85% 15%, 100% 50%, 85% 85%, 50% 100%, 15% 85%, 0% 50%, 15% 15%);
+}
+
+canvas {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+.doughnutChart {
+  position: relative;
+  z-index: 0;
+}
+.doughnutChart__info {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 60%;
+  pointer-events: none;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  font-size: 24px;
+  font-family: "Montserrat", sans-serif;
+}
+.doughnutChart__info strong {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1em;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+.doughnutChart__info small {
+  color: #bababa;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 0.65em;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
 }
 
 .footer {
@@ -2250,6 +2216,41 @@ svg {
   overflow: hidden;
   min-height: 100%;
 }
+.main__content {
+  padding-left: 250px;
+  position: relative;
+  height: 100%;
+}
+.main__content-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.main__content-bg:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(90px);
+          backdrop-filter: blur(90px);
+  z-index: 2;
+}
+.main__content-bg img {
+  width: 100%;
+  height: 100%;
+}
+.main__content._admin {
+  padding-left: 96px;
+}
+.main__content._sidebar {
+  padding-left: 368px;
+}
 
 .autoContainer {
   max-width: 1380px;
@@ -2605,7 +2606,7 @@ svg {
   font-weight: 500;
 }
 .login__bg {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -2640,7 +2641,7 @@ svg {
   position: absolute;
   width: 1068px;
   left: -4%;
-  bottom: -20%;
+  bottom: -35%;
 }
 .login__bg-shape img {
   width: 100%;
@@ -2922,7 +2923,7 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 3px;
-  background: #fff627;
+  background: rgb(255, 246, 39);
 }
 .dashboardInfo__item-image {
   display: -webkit-box;
@@ -3985,29 +3986,27 @@ svg {
   h1 {
     font-size: 9cqh;
   }
-
   h4._extra-lg {
     font-size: 45px;
   }
   h4._lg {
     font-size: 42px;
   }
-
   .main__content {
     padding-left: 200px;
   }
   .main__content._sidebar {
     padding-left: 300px;
   }
-
   .list {
     font-size: 16px;
   }
-
+  .doughnutChart__info {
+    font-size: 20px;
+  }
   .header__inner {
     padding-left: 60px;
   }
-
   .sidebar {
     width: 200px;
   }
@@ -4024,7 +4023,6 @@ svg {
   .sidebar._admin .sidebarLink {
     font-size: 18px;
   }
-
   .about__inner .video {
     width: calc(54% + 110px);
   }
@@ -4038,16 +4036,13 @@ svg {
   .about__inner-box {
     gap: 20px;
   }
-
   .benefits__inner-images .bubles__shape._yellow {
     left: -270px;
     bottom: -270px;
   }
-
   .hero__inner {
     padding: 120px 0 32px 60px;
   }
-
   .dashboard__inner-row {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
@@ -4061,41 +4056,36 @@ svg {
   .autoContainer {
     padding: 0 40px;
   }
-
   h1 {
     font-size: 8.5vh;
   }
-
   h4._extra-lg {
     font-size: 40px;
   }
   h4._lg {
     font-size: 38px;
   }
-
   p {
     font-size: 18px;
   }
-
   .button--primary._extra {
     font-size: 16px;
   }
   .button--primary._extra-lg {
     font-size: 16px;
   }
-
+  .doughnutChart__info {
+    font-size: 18px;
+  }
   .sponsors {
     padding-bottom: 80px;
   }
-
   .about {
     padding: 80px 0;
   }
-
   .achievement {
     padding: 70px 0;
   }
-
   .benefits {
     padding: 80px 0;
   }
@@ -4105,15 +4095,12 @@ svg {
   .benefits .autoContainer {
     padding-right: 40px;
   }
-
   .price {
     padding: 80px 0;
   }
-
   .footer {
     padding-top: 80px;
   }
-
   .dashboard .autoContainer {
     padding: 0 15px;
   }
@@ -4125,18 +4112,15 @@ svg {
   .autoContainer {
     padding: 0 30px;
   }
-
   h1 ._lg {
     font-size: 1.2em;
   }
-
   h4._extra-lg {
     font-size: 35px;
   }
   h4._lg {
     font-size: 35px;
   }
-
   h5 {
     font-size: 18px;
   }
@@ -4146,14 +4130,12 @@ svg {
   h5._extra-sm {
     font-size: 16px;
   }
-
   p {
     font-size: 16px;
   }
   p._sm {
     font-size: 16px;
   }
-
   .button--primary {
     min-width: 120px;
   }
@@ -4166,22 +4148,18 @@ svg {
   .button--secondary {
     font-size: 20px;
   }
-
   .logo {
     font-size: 30px;
   }
   .logo--lg {
     font-size: 20px;
   }
-
   .list {
     font-size: 14px;
   }
-
   .toggle {
     font-size: 13px;
   }
-
   .header {
     padding: 25px 0;
   }
@@ -4200,7 +4178,6 @@ svg {
     z-index: 2;
     left: 15px;
   }
-
   .hero__inner {
     padding: 120px 0 32px 45px;
   }
@@ -4211,7 +4188,6 @@ svg {
     width: 70px;
     height: 70px;
   }
-
   .sponsors__inner {
     gap: 150px;
   }
@@ -4225,7 +4201,6 @@ svg {
     width: 140px;
     height: 30px;
   }
-
   .achievement__inner {
     padding: 50px 30px;
   }
@@ -4239,7 +4214,6 @@ svg {
     width: 45px;
     height: 45px;
   }
-
   .benefits {
     padding: 80px 0;
   }
@@ -4249,7 +4223,6 @@ svg {
   .benefits .autoContainer {
     padding-right: 30px;
   }
-
   .price__inner-tools {
     padding-bottom: 35px;
   }
@@ -4259,7 +4232,6 @@ svg {
   .price__inner-group-text {
     padding: 35px 0;
   }
-
   .footer__inner {
     padding: 60px;
   }
@@ -4268,18 +4240,15 @@ svg {
   .autoContainer {
     padding: 0 30px;
   }
-
   h1 {
     font-size: 7.5vh;
   }
-
   h4._extra-lg {
     font-size: 32px;
   }
   h4._lg {
     font-size: 32px;
   }
-
   .hero__inner {
     padding: 100px 0 32px 45px;
   }
@@ -4291,7 +4260,6 @@ svg {
     width: 65px;
     height: 65px;
   }
-
   .sponsors {
     padding-bottom: 60px;
   }
@@ -4308,11 +4276,9 @@ svg {
     width: 130px;
     height: 27px;
   }
-
   .swiper-slide {
     margin: 0 20px;
   }
-
   .about {
     padding: 60px 0;
   }
@@ -4329,15 +4295,12 @@ svg {
   .about__inner-box {
     gap: 15px;
   }
-
   .achievement {
     padding: 60px 0;
   }
-
   .benefits {
     padding: 60px 0;
   }
-
   .price {
     padding: 60px 0;
   }
@@ -4354,7 +4317,6 @@ svg {
   .price__inner-group-text {
     padding: 30px 0;
   }
-
   .footer {
     padding-top: 60px;
   }
@@ -4378,15 +4340,12 @@ svg {
   h1 {
     font-size: 60px;
   }
-
   h4 {
     font-size: 40px;
   }
-
   h5._extra-sm {
     font-size: 14px;
   }
-
   .button {
     font-size: 12px;
   }
@@ -4405,14 +4364,12 @@ svg {
   .button--secondary {
     font-size: 20px;
   }
-
   .logo {
     font-size: 28px;
   }
   .logo--lg {
     font-size: 19px;
   }
-
   .header {
     padding: 20px 0;
   }
@@ -4422,7 +4379,6 @@ svg {
   .header.sticky .logo {
     font-size: 26px;
   }
-
   .hero .video {
     width: 200px;
   }
@@ -4430,7 +4386,6 @@ svg {
     width: 60px;
     height: 60px;
   }
-
   .about__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4482,7 +4437,6 @@ svg {
   .about__inner h4 {
     max-width: 450px;
   }
-
   .achievement__inner {
     padding: 50px 20px;
   }
@@ -4502,7 +4456,6 @@ svg {
   .achievementItem h4._lg {
     font-size: 28px;
   }
-
   .benefits__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -4547,7 +4500,6 @@ svg {
   .benefits .autoContainer {
     padding: 0 30px;
   }
-
   .price__inner {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -4596,36 +4548,30 @@ svg {
   h1 {
     font-size: 50px;
   }
-
   p {
     font-size: 14px;
   }
   p._sm {
     font-size: 14px;
   }
-
   h5._extra-sm {
     font-size: 12px;
   }
-
   h4 {
     font-size: 35px;
   }
-
   h6 {
     font-size: 12px;
   }
   h6._lg {
     font-size: 12px;
   }
-
   .logo {
     font-size: 26px;
   }
   .logo--lg {
     font-size: 18px;
   }
-
   .hero__inner {
     gap: 40px;
   }
@@ -4636,7 +4582,6 @@ svg {
     width: 55px;
     height: 55px;
   }
-
   .sponsors__inner {
     gap: 100px;
   }
@@ -4650,11 +4595,9 @@ svg {
     width: 130px;
     height: 25px;
   }
-
   .swiper-slide {
     margin: 0 15px;
   }
-
   .footer__inner {
     padding: 30px;
   }
@@ -4675,21 +4618,18 @@ svg {
   .button--primary::before {
     border: 1px solid transparent;
   }
-
   .logo {
     font-size: 24px;
   }
   .logo--lg {
     font-size: 16px;
   }
-
   .bubles__shape {
     -webkit-filter: blur(200px);
             filter: blur(200px);
     width: 350px;
     height: 350px;
   }
-
   .list .bubles {
     -webkit-transition: all 0.2s ease-in-out 0s;
     transition: all 0.2s ease-in-out 0s;
@@ -4714,7 +4654,6 @@ svg {
     left: -50px;
     bottom: -50px;
   }
-
   .header__inner {
     padding-left: 0;
   }
@@ -4727,7 +4666,6 @@ svg {
     width: 22px;
     height: 10px;
   }
-
   .hero__inner {
     padding-left: 0;
   }
@@ -4744,7 +4682,6 @@ svg {
   .hero .video__border {
     display: none;
   }
-
   .sponsors {
     padding: 0 0 50px 0;
   }
@@ -4758,7 +4695,6 @@ svg {
     width: 125px;
     height: 23px;
   }
-
   .about {
     padding: 50px 0;
   }
@@ -4766,7 +4702,6 @@ svg {
     bottom: -170px;
     left: -100px;
   }
-
   .achievement {
     padding: 50px 0;
   }
@@ -4802,7 +4737,6 @@ svg {
     left: -300px;
     bottom: unset;
   }
-
   .benefits {
     padding: 80px 0 50px;
   }
@@ -4814,14 +4748,12 @@ svg {
     left: -100px;
     bottom: -50px;
   }
-
   .price {
     padding: 50px 0;
   }
   .price__inner-image .ratioImage {
     padding-bottom: 120%;
   }
-
   .footer {
     padding-top: 50px;
   }
@@ -4856,14 +4788,12 @@ svg {
   .header.sticky .logo {
     font-size: 20px;
   }
-
   .nav__inner {
     padding: 50px 30px;
   }
   .nav__inner-link {
     font-size: 16px;
   }
-
   .hero__inner-footer {
     gap: 40px;
   }
@@ -4873,7 +4803,6 @@ svg {
   .hero__bg-image._sm {
     width: 90%;
   }
-
   .achievementItem__image {
     width: 35px;
     height: 35px;
@@ -4886,7 +4815,6 @@ svg {
   .toggle__text {
     font-size: 14px;
   }
-
   .about__inner {
     gap: 32px;
   }
@@ -4902,12 +4830,10 @@ svg {
     width: 62px;
     height: 62px;
   }
-
   .achievementItem__image {
     width: 30px;
     height: 30px;
   }
-
   .benefitsImage._lg .ratioImage {
     padding-bottom: 72%;
     border-radius: 0 54px 19px 0;
@@ -4935,7 +4861,6 @@ svg {
     -webkit-filter: blur(10px);
             filter: blur(10px);
   }
-
   .price__inner-tools {
     padding-bottom: 22px;
   }
@@ -4956,14 +4881,12 @@ svg {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-
   .hero {
     min-height: 700px;
   }
   .hero h1 span br {
     display: block;
   }
-
   .login__inner {
     min-height: 650px;
   }
@@ -4982,7 +4905,6 @@ svg {
     font-weight: 500;
     margin-top: unset;
   }
-
   p {
     font-size: 12px;
   }
@@ -4990,7 +4912,6 @@ svg {
     font-size: 12px;
     line-height: 1.5em;
   }
-
   h5 {
     font-size: 15px;
   }
@@ -5000,18 +4921,15 @@ svg {
   h5._extra-sm {
     font-size: 10px;
   }
-
   h4 {
     font-size: 29px;
   }
-
   h6 {
     font-size: 10px;
   }
   h6._lg {
     font-size: 10px;
   }
-
   .button {
     font-size: 10px;
     min-width: 92px;
@@ -5028,18 +4946,15 @@ svg {
     font-size: 17px;
     padding: 0.87em 1.2em;
   }
-
   .logo {
     font-size: 22px;
   }
   .logo--lg {
     font-size: 15px;
   }
-
   .list {
     font-size: 12px;
   }
-
   .range {
     padding-bottom: 45px;
   }
@@ -5069,7 +4984,6 @@ svg {
   .range input[type=range]::-webkit-slider-runnable-track {
     height: 6px;
   }
-
   .toggle {
     gap: 8px;
   }
@@ -5090,12 +5004,10 @@ svg {
     -webkit-transform: translate(10px, -50%);
             transform: translate(10px, -50%);
   }
-
   .achievementItem__image {
     width: 27px;
     height: 27px;
   }
-
   .footer__inner-column {
     width: -webkit-fit-content;
     width: -moz-fit-content;
@@ -5107,7 +5019,6 @@ svg {
   .footer__inner-copy {
     font-size: 12px;
   }
-
   .login__inner {
     padding: 30px 0;
     min-height: 570px;

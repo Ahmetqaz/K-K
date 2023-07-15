@@ -1,116 +1,143 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="icon" href="images/logo-small.svg" /> -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/main.css" />
-  <!-- <link rel="icon" href="images/logo-small.svg" /> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <title>Home</title>
+  </head>
 
-  <title>Home</title>
-</head>
-
-<body>
-  <!-- main start -->
-  <div class="main">
-    <!-- login start -->
-    <section class="login">
-      <div class="autoContainer">
-        <div class="login__inner">
-          <div class="logo logo--lg">
-            <div class="logo__image">
-              <img src="./images/logo.png" alt="">
+  <body>
+    <!-- main start -->
+    <div class="main">
+      <!-- login start -->
+      <section class="login">
+        <div class="autoContainer">
+          <form autocomplete="off">
+            <div class="login__inner">
+              <div class="logo logo--lg">
+                <div class="logo__image">
+                  <img src="./images/logo.png" alt="" />
+                </div>
+                <span class="text text--gradient"> K&K Digital Media </span>
+              </div>
+              <div class="login__inner-info">
+                <h4>Welcome Back!</h4>
+                <h6>
+                  Don’t have an account?
+                  <a href="#"> Sign up for free </a>
+                </h6>
+              </div>
+              <div class="input__group">
+                <label> Email Address </label>
+                <div class="input input--text">
+                  <input
+                    type="email"
+                    name="username"
+                    placeholder="muddassar@gmail.com|"
+                  />
+                </div>
+              </div>
+              <div class="input__group">
+                <label> Password </label>
+                <div class="input input--ico _stroke">
+                  <input
+                    type="password"
+                    name="new-password"
+                    placeholder="Input Your Password"
+                    id="passwordInput"
+                  />
+                  <button
+                    class="ico _eyeIco"
+                    type="button"
+                    data-event="togglePassword"
+                    data-input="passwordInput"
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M12.9833 10.0001C12.9833 11.6501 11.6499 12.9834 9.99993 12.9834C8.34993 12.9834 7.0166 11.6501 7.0166 10.0001C7.0166 8.35006 8.34993 7.01672 9.99993 7.01672C11.6499 7.01672 12.9833 8.35006 12.9833 10.0001Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M10.0001 16.8916C12.9418 16.8916 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00831 17.5918 7.83331C15.6834 4.83331 12.9418 3.09998 10.0001 3.09998C7.05845 3.09998 4.31678 4.83331 2.40845 7.83331C1.65845 9.00831 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8916 10.0001 16.8916Z"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+              <div class="login__inner-box">
+                <h6 class="_lg">Forget Password</h6>
+                <button class="button button--primary">
+                  <span> Login Now </span>
+                </button>
+              </div>
+              <div class="login__inner-devider">
+                <h6 class="_lg">or</h6>
+              </div>
+              <button class="button button--social">
+                <span class="ico">
+                  <img src="./images/login/goggle.svg" alt="" />
+                </span>
+                Sign in with Google
+              </button>
+              <h6 class="login__inner-text">
+                Protected by reCAPTCHA and subject to the Google
+                <a href="#"> Privacy Policy </a> and
+                <a href="#"> Terms of Service. </a>
+              </h6>
             </div>
-            <span class="text text--gradient">
-              K&K Digital Media
-            </span>
-          </div>
-          <div class="login__inner-info">
-            <h4>
-              Welcome Back!
-            </h4>
-            <h6>
-              Don’t have an account?
-              <a href="#">
-                Sign up for free
-              </a>
-            </h6>
-          </div>
-          <div class="input__group">
-            <label>
-              Email Address
-            </label>
-            <div class="input input--text">
-              <input type="email" placeholder="muddassar@gmail.com|">
-            </div>
-          </div>
-          <div class="input__group">
-            <label>
-              Password
-            </label>
-            <div class="input input--ico _stroke">
-              <input type="email" placeholder="Input Your Password">
-              <span class="ico">
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M12.9833 10.0001C12.9833 11.6501 11.6499 12.9834 9.99993 12.9834C8.34993 12.9834 7.0166 11.6501 7.0166 10.0001C7.0166 8.35006 8.34993 7.01672 9.99993 7.01672C11.6499 7.01672 12.9833 8.35006 12.9833 10.0001Z"
-                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                  <path
-                    d="M10.0001 16.8916C12.9418 16.8916 15.6834 15.1583 17.5918 12.1583C18.3418 10.9833 18.3418 9.00831 17.5918 7.83331C15.6834 4.83331 12.9418 3.09998 10.0001 3.09998C7.05845 3.09998 4.31678 4.83331 2.40845 7.83331C1.65845 9.00831 1.65845 10.9833 2.40845 12.1583C4.31678 15.1583 7.05845 16.8916 10.0001 16.8916Z"
-                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </span>
-            </div>
-          </div>
-          <div class="login__inner-box">
-            <h6 class="_lg">
-              Forget Password
-            </h6>
-            <button class="button button--primary">
-              <span>
-                Login Now
-              </span>
-            </button>
-          </div>
-          <div class="login__inner-devider">
-            <h6 class="_lg">
-              or
-            </h6>
-          </div>
-          <button class="button button--social">
-            <span class="ico">
-              <img src="./images/login/goggle.svg" alt="">
-            </span>
-            Sign in with Google
-          </button>
-          <h6 class="login__inner-text">
-            Protected by reCAPTCHA and subject to the Google
-            <a href="#">
-              Privacy Policy
-            </a> and
-            <a href="#">
-              Terms of Service.
-            </a>
-          </h6>
+          </form>
         </div>
-      </div>
-      <div class="login__bg">
-        <div class="login__bg-image">
-          <img src="./images/login/login-bg.png" alt="">
+        <div class="login__bg">
+          <div class="login__bg-image">
+            <img src="./images/login/login-bg.png" alt="" />
+          </div>
+          <div class="login__bg-shape">
+            <img src="./images/login/kogin-shape.png" alt="" />
+          </div>
         </div>
-        <div class="login__bg-shape">
-          <img src="./images/login/kogin-shape.png" alt="">
-        </div>
-      </div>
-    </section>
-    <!-- login end -->
-  </div>
-  <!-- main end -->
+      </section>
+      <!-- login end -->
+    </div>
+    <!-- main end -->
 
-  <script></script>
+    <script>
+      const togglePasswordButton = document.querySelector(
+        '[data-event="togglePassword"]'
+      );
+      if (togglePasswordButton) {
+        const input = togglePasswordButton.dataset.input
+          ? document.getElementById(togglePasswordButton.dataset.input)
+          : null;
 
-</body>
-
+        input.value = "";
+        togglePasswordButton.onclick = () => {
+          if (!input) return;
+          togglePasswordButton.classList.toggle("active");
+          let type = togglePasswordButton.classList.contains("active")
+            ? "text"
+            : "password";
+          input.setAttribute("type", type);
+        };
+      }
+    </script>
+  </body>
 </html>
