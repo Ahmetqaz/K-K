@@ -508,12 +508,21 @@
   }
 }
 
-@mixin index-1460 {
+@mixin index-1440 {
   .hero {
     &__bg {
       &-image {
         &._sm {
-          width: 85%;
+          width: 95%;
+        }
+      }
+    }
+  }
+  .benefits{
+    &Image{
+      &._lg{
+        .ratioImage{
+          border-radius: 0 98px 35px 0
         }
       }
     }

@@ -4054,9 +4054,13 @@ form {
   margin: 0 30px;
 }
 
-@media (max-width: 1460px) {
+@media (max-width: 1440px) {
   .hero__bg-image._sm {
-    width: 85%;
+    width: 95%;
+  }
+
+  .benefitsImage._lg .ratioImage {
+    border-radius: 0 98px 35px 0;
   }
 }
 @media (max-width: 1280px) {
