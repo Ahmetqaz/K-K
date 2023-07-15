@@ -8,7 +8,7 @@
     <!-- <link rel="icon" href="images/logo-small.svg" /> -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
     />
 
     <title>Home</title>
@@ -121,7 +121,10 @@
                       </svg>
                     </span>
                   </div>
-                  <button class="button button--ico">
+                  <button
+                    class="button button--ico notification"
+                    id="notificationBtn"
+                  >
                     <span class="ico _stroke">
                       <svg
                         width="25"
@@ -302,7 +305,140 @@
       <!-- main__content end -->
     </div>
     <!-- main end -->
+    <div class="notifications" id="notificationsMenu">
+      <div class="notifications__inner">
+        <div class="notifications__inner-title">
+          <h5>Notifications</h5>
+        </div>
+        <div class="notifications__inner-list">
+          <div class="notifications__item new">
+            <div class="notifications__item-ico">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+            </div>
+            <strong>New feauters are available</strong>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              eligendi hic, dicta reprehenderit voluptatibus non autem itaque
+              nobis
+            </span>
+          </div>
+          <div class="notifications__item unread">
+            <div class="notifications__item-ico">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+            </div>
+            <strong>New feauters are available</strong>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              eligendi hic, dicta reprehenderit voluptatibus non autem itaque
+              nobis
+            </span>
+          </div>
+          <div class="notifications__item">
+            <div class="notifications__item-ico">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+            </div>
+            <strong>New feauters are available</strong>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              eligendi hic, dicta reprehenderit voluptatibus non autem itaque
+              nobis
+            </span>
+          </div>
+          <div class="notifications__item">
+            <div class="notifications__item-ico">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+            </div>
+            <strong>New feauters are available</strong>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              eligendi hic, dicta reprehenderit voluptatibus non autem itaque
+              nobis
+            </span>
+          </div>
+          <div class="notifications__item">
+            <div class="notifications__item-ico">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2zM8 1.918l-.797.161A4.002 4.002 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4.002 4.002 0 0 0-3.203-3.92L8 1.917zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5.002 5.002 0 0 1 13 6c0 .88.32 4.2 1.22 6z"
+                />
+              </svg>
+            </div>
+            <strong>New feauters are available</strong>
+            <span>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo
+              eligendi hic, dicta reprehenderit voluptatibus non autem itaque
+              nobis
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      /// notifactions menu toggle
+      const notificationsBtn = document.getElementById("notificationBtn");
+      const notificationsMenu = document.getElementById("notificationsMenu");
+      const toggleNotifiactionMenu = (state = null) => {
+        let isActive =
+          state !== null
+            ? !state
+            : notificationsBtn.classList.contains("active");
 
+        notificationsBtn.classList.toggle("active", !isActive);
+        notificationsMenu.classList.toggle("active", !isActive);
+      };
+      notificationsBtn.onclick = () => {
+        toggleNotifiactionMenu();
+      };
+      notificationsMenu.onclick = ({ target }) => {
+        if (target === notificationsMenu) toggleNotifiactionMenu(false);
+      };
+    </script>
     <script src="./js/customSelect.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>

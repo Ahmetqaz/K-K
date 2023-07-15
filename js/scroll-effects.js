@@ -1,3 +1,4 @@
+const pinnedItem = document.getElementById("pin");
 document.addEventListener("DOMContentLoaded", () => {
   var controller = new ScrollMagic.Controller();
 
@@ -6,12 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
     '[data-event="scroll-toggle"]'
   );
   new ScrollMagic.Scene({
-    triggerElement: "#pin",
-    duration: "180%",
+    triggerElement: pinnedItem,
+    duration: "130%",
     offset: 0,
     triggerHook: 0.1,
   })
-    .setPin("#pin")
+    .setPin(pinnedItem)
     .addTo(controller)
     // .addIndicators() // add indicators (requires plugin)
     .on("progress", function (e) {
@@ -23,11 +24,29 @@ document.addEventListener("DOMContentLoaded", () => {
           ? length - 1
           : parseInt(progress / progressPerItem);
 
+      const setTabActive = (item, state = true) => {
+        let tab = item.dataset.tab
+          ? document.getElementById(item.dataset.tab)
+          : null;
+        if (!tab) return;
+
+        tab.classList.toggle("active", state);
+      };
       scrollTogglers.forEach((item, index) => {
-        item.classList.toggle("prev", index === activeItem - 1);
         item.classList.toggle("active", index === activeItem);
+        setTabActive(item, index === activeItem);
       });
     });
+  scrollTogglers.forEach((element, index) => {
+    element.onclick = () => {
+      const scrollMagicPin = pinnedItem.parentElement;
+      let pinOffset = scrollMagicPin.offsetTop;
+      let pinHeight = scrollMagicPin.scrollHeight;
+      const togglePosition =
+        pinOffset + (pinHeight / scrollTogglers.length) * index;
+      window.scrollTo(0, togglePosition - 30);
+    };
+  });
 
   document.querySelectorAll(".parallaxWrapper").forEach((parallaxWrapper) => {
     const layers = parallaxWrapper.querySelectorAll(".parallaxLayer");

@@ -1,8 +1,10 @@
 .main {
+  position: relative;
   display: flex;
   flex-direction: column;
   overflow: hidden;
   min-height: 100%;
+  z-index: 0;
   &__content {
     padding-left: 250px;
     position: relative;
@@ -132,31 +134,111 @@
     }
   }
 }
-.wrapper {
-  position: relative;
-  &__bg {
-    position: absolute;
-    width: 100%;
-    height: 654px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -3;
-    &:after {
-      content: "";
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      position: absolute;
-      background: rgba(0, 0, 0, 0.74);
-      backdrop-filter: blur(15px);
+.notifications {
+  position: fixed;
+  top: 0;
+  left: 110%;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  z-index: 1;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease-in 0.2s, all 0s linear 0.35s;
+
+  &.active {
+    opacity: 1;
+    left: 0%;
+    pointer-events: all;
+    transition: opacity 0.2s ease-out 0s;
+  }
+  &.active & {
+    &__inner {
+      transform: unset;
+      transition: transform 0.2s ease-out 0.15s;
     }
-    img {
+  }
+
+  &__inner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80%;
+    height: 100%;
+    max-width: 400px;
+    background: $black-5;
+    border-left: 1px solid rgba($white, 0.04);
+    padding: 30px 10px;
+    transform: translateX(100%);
+    transition: transform 0.2s ease-in 0s;
+
+    &-title {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba($white, 0.2);
+      padding: 0 10px 15px 10px;
+    }
+    &-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 15px 0;
+    }
+  }
+  &__item {
+    cursor: pointer;
+    position: relative;
+    padding: 6px 15px 6px 75px;
+    background: rgba($white, 0.03);
+    border-radius: 14px;
+    min-height: 60px;
+    transition: 0.3s ease-out;
+
+    &-ico {
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      width: 50px;
+      height: 50px;
+      transform: translateY(-50%);
+      background: rgba($primary, 0.1);
+      border-radius: 10px;
+
+      //display
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 55%;
+        height: 55%;
+        color: $orange;
+      }
+    }
+    strong,
+    span {
+      display: block;
+      text-overflow: ellipsis;
       width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    span {
+      color: $white-2;
+      font-size: 0.8em;
+    }
+    &.new {
+      background-color: rgba($green-2, 0.15);
+    }
+    &.new &-ico {
+      background-color: rgba($green-2, 0.15);
+    }
+    &.unread {
+      background-color: rgba($white, 0.1);
+    }
+    &:hover {
+      opacity: 0.8;
     }
   }
 }

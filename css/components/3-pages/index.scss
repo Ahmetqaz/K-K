@@ -96,6 +96,16 @@
           top: 50%;
           left: 66.5%;
           width: 13.5%;
+
+          &__border {
+            opacity: 0.55;
+          }
+          &__box {
+            &-button {
+              width: 40%;
+              height: auto;
+            }
+          }
         }
       }
     }
@@ -143,7 +153,6 @@
     .swiper {
       &-wrapper {
         transition-timing-function: linear !important;
-        
       }
     }
   }
@@ -338,6 +347,34 @@
 }
 .benefits {
   padding: 100px 0;
+  position: relative;
+  &__bg {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    max-height: 800px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -3;
+    &:after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.74);
+      backdrop-filter: blur(15px);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      max-height: 800px;
+      object-fit: cover;
+      z-index: -1;
+    }
+  }
   &__inner {
     display: flex;
     justify-content: space-between;
@@ -366,61 +403,18 @@
     }
   }
   &Image {
-    &._lg {
-      .ratioImage {
-        border-radius: 30px 98px 35px 30px;
-        overflow: hidden;
-        img {
-          &:nth-child(2) {
-            display: none;
-          }
-        }
-      }
-    }
-    &._sm {
-      position: absolute;
-      top: -36px;
-      left: 26px;
-      z-index: 2;
-      width: 35%;
-      max-width: 240px;
-      .ratioImage {
-        border-radius: 24px;
-        img {
-          border-radius: inherit;
-          &:nth-child(2) {
-            opacity: 0.4;
-            z-index: -1;
-            filter: blur(33px);
-          }
-          &:nth-child(3) {
-            display: none;
-          }
-        }
-      }
-    }
-    &._extra-sm {
-      position: absolute;
-      right: 55px;
-      bottom: -30px;
-      z-index: 2;
-      width: 30%;
-      max-width: 180px;
-      border-radius: 24px;
-      .ratioImage {
-        border-radius: 24px;
-      }
+    display: none;
+    .ratioImage {
+      border-radius: 30px 98px 35px 30px;
+      overflow: hidden;
       img {
-        border-radius: inherit;
         &:nth-child(2) {
-          opacity: 0.4;
-          z-index: -1;
-          filter: blur(33px);
-        }
-        &:nth-child(3) {
           display: none;
         }
       }
+    }
+    &.active {
+      display: block;
     }
   }
   .autoContainer {
@@ -518,11 +512,11 @@
       }
     }
   }
-  .benefits{
-    &Image{
-      &._lg{
-        .ratioImage{
-          border-radius: 0 98px 35px 0
+  .benefits {
+    &Image {
+      &._lg {
+        .ratioImage {
+          border-radius: 0 98px 35px 0;
         }
       }
     }
@@ -601,8 +595,14 @@
     &__bg {
       &-image {
         &._sm {
-          width: 95%;
-          bottom: 5%;
+          width: 60%;
+          max-width: 500px;
+
+          .video {
+            left: 31%;
+            top: 52%;
+            width: 32.5%;
+          }
         }
       }
     }
@@ -670,16 +670,6 @@
   .hero {
     &__inner {
       padding: 100px 0 32px 45px;
-    }
-    .video {
-      width: 220px;
-      right: 0;
-      &__box {
-        &-button {
-          width: 65px;
-          height: 65px;
-        }
-      }
     }
   }
   .sponsors {
@@ -753,17 +743,6 @@
   }
 }
 @mixin index-840 {
-  .hero {
-    .video {
-      width: 200px;
-      &__box {
-        &-button {
-          width: 60px;
-          height: 60px;
-        }
-      }
-    }
-  }
   .about {
     &__inner {
       flex-direction: column;
@@ -936,13 +915,15 @@
   .hero {
     &__inner {
       gap: 40px;
+      &-content {
+        margin: 5vh 0 auto 0;
+      }
     }
-    .video {
-      width: 160px;
-      &__box {
-        &-button {
-          width: 55px;
-          height: 55px;
+    &__bg {
+      &-image {
+        &._sm {
+          width: 90%;
+          max-width: unset;
         }
       }
     }
@@ -975,16 +956,6 @@
     &__inner {
       padding-left: 0;
       &-tabs {
-        display: none;
-      }
-    }
-    .video {
-      width: 55px;
-      height: 55px;
-      &__content {
-        display: none;
-      }
-      &__border {
         display: none;
       }
     }
@@ -1096,13 +1067,6 @@
       }
       &-group {
         gap: 30px;
-      }
-    }
-    &__bg {
-      &-image {
-        &._sm {
-          width: 90%;
-        }
       }
     }
   }
@@ -1223,8 +1187,6 @@
   }
 }
 @mixin index-390 {
-  .hero {
-  }
   .achievement {
     &Item {
       &__image {
