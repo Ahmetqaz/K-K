@@ -1,3 +1,6 @@
+@media (max-width: 1460px) {
+  @include index-1460;
+}
 @media (max-width: 1280px) {
   @include typography-1280;
   @include components-1280;
@@ -24,7 +27,6 @@
   @include header-1025;
   @include index-1025;
   @include footer-1025;
-
 }
 @media (max-width: 940px) {
   .autoContainer {
@@ -68,5 +70,4 @@
   @include index-390;
   @include footer-390;
   @include login-390;
-
 }
