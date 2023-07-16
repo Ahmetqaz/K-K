@@ -242,7 +242,17 @@
     }
   }
 }
+.wrapper {
+  position: relative;
 
+  &__line {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    width: 0;
+    border-right: 2px dashed lightblue;
+  }
+}
 @keyframes modal-enter {
   from {
     opacity: 0;

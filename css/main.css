@@ -415,24 +415,24 @@ input::-webkit-inner-spin-button {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 4px;
-  display: none;
+  width: 8px;
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #fff;
+  background: #161616;
+  margin-block: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.2);
   border-radius: 10px;
+  background: rgba(99, 129, 255, 0.6);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(99, 129, 255, 0.8);
 }
 
 body {
@@ -2485,6 +2485,17 @@ form {
 }
 .notifications__item:hover {
   opacity: 0.8;
+}
+
+.wrapper {
+  position: relative;
+}
+.wrapper__line {
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 0;
+  border-right: 2px dashed lightblue;
 }
 
 @-webkit-keyframes modal-enter {

@@ -1,15 +1,18 @@
-const swiper = new Swiper(".swiper", {
+const settings = {
   loop: true,
-  slidesPerView: "auto",
-  autoplay: true,
-  speed: 3000,
-  freeMode: true,
-  speed: 5000,
-  freeModeMomentum: false,
   autoplay: {
     delay: 0,
-    disableOnInteraction: false,
-    pauseOnMouseEnter: false,
-    stopOnLastSlide: false,
   },
+  speed: 5000, //add
+  slidesPerView: 3, //add
+};
+
+window.addEventListener("DOMContentLoaded", (event) => {
+  console.log(" loaded");
+
+  document.querySelectorAll(".swiper").forEach((swiperSlider) => {
+    new Swiper(swiperSlider, settings);
+  });
 });
+
+console.log("before loaded");
